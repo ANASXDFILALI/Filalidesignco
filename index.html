@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filali Design Co. | Riad Digital</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Marcellus&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'riad-red': '#5c1a1a',
+              'riad-brown': '#3d2719',
+              'riad-white': '#f8f5f0',
+              'riad-blue': '#0a1f29',
+              'riad-sand': '#d4b596',
+              'riad-gold': '#b89446',
+              'riad-gold-leaf': '#d4af37',
+              'riad-gold-light': '#E6C76C',
+            },
+            fontFamily: {
+              arabic: ['Amiri', 'serif'],
+              royal: ['Cinzel', 'serif'],
+              elegant: ['Cormorant Garamond', 'serif'],
+              classic: ['Marcellus', 'serif'],
+            },
+            backgroundImage: {
+              'gold-gradient': 'linear-gradient(135deg, #b89446 0%, #f4e4a6 50%, #d4af37 100%)',
+              'gold-glow': 'radial-gradient(circle at center, rgba(212, 175, 55, 0.4) 0%, transparent 70%)',
+              'patio-fade': 'linear-gradient(to top, #0a1f29 0%, transparent 100%)',
+            },
+            boxShadow: {
+              'deep': '0 25px 50px -12px rgba(0, 0, 0, 0.45)',
+              'gold': '0 0 30px rgba(212, 175, 55, 0.3)',
+            },
+            animation: {
+              'float': 'float 15s ease-in-out infinite',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'rotate-slow': 'spin 60s linear infinite',
+              'subtle-zoom': 'subtle-zoom 30s ease-in-out infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0) scale(1)' },
+                '50%': { transform: 'translateY(-100px) scale(1.2)' },
+              },
+              'subtle-zoom': {
+                '0%, 100%': { transform: 'scale(1.05)' },
+                '50%': { transform: 'scale(1.15)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom scrollbar for Webkit */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f8f5f0; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #b89446; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #5c1a1a; 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "framer-motion": "https://esm.sh/framer-motion@^12.23.26",
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-riad-white text-riad-brown font-elegant antialiased overflow-x-hidden selection:bg-riad-gold selection:text-white">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

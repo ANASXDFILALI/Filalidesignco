@@ -1,0 +1,173 @@
+{
+    "hero": {
+      "video": "https://www.pexels.com/download/video/35144728/",
+      "poster": "https://images.pexels.com/photos/19632264/pexels-photo-19632264.jpeg",
+      "fallback": "https://images.pexels.com/photos/5696144/pexels-photo-5696144.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "pattern": "https://www.transparenttextures.com/patterns/arabesque.png"
+    },
+    "gallery": {
+      "images": [
+        {
+          "src": "https://www.viametiers.fr/wp-content/uploads/2023/10/metier-Menuisier.jpg",
+          "title": "Menuiserie d'Art",
+          "subtitle": "Le bois sculpté avec précision dans nos ateliers",
+          "alt": "Menuisier travaillant le bois dans l'atelier"
+        },
+        {
+          "src": "https://images.pexels.com/photos/276267/pexels-photo-276267.jpeg",
+          "title": "Couture & Textiles",
+          "subtitle": "L'art du fil et de l'aiguille pour des finitions parfaites",
+          "alt": "Tailleur travaillant sur des tissus d'ameublement"
+        },
+        {
+          "src": "https://img.over-blog-kiwi.com/0/73/31/96/obpicmQmjAh.jpeg",
+          "title": "Tapisserie & Montage",
+          "subtitle": "Assemblage artisanal des fauteuils et canapés",
+          "alt": "Artisan montant le rembourrage d'un fauteuil"
+        },
+        {
+          "src": "https://images.pexels.com/photos/1108528/pexels-photo-1108528.jpeg",
+          "title": "Zouaq & Finition",
+          "subtitle": "Peinture traditionnelle et ornements peints à la main",
+          "alt": "Artisan appliquant la peinture zouaq sur bois ornemental"
+        }
+      ]
+    },
+    
+        "capitone": {
+          "salons": [
+            {
+              "id": "beldi",
+              "title": "Salon Marocain Traditionnel",
+              "subtitle": "Le 'Beldi' Authentique",
+              "description": "L'âme du Maroc. Des banquettes basses 'Sedari' sculptées en bois de cèdre, disposées en U pour la convivialité. Riche en tissus brocardés, passementerie complexe et coussins assortis.",
+              "image": "https://i.pinimg.com/originals/0f/bd/e9/0fbde9627d379bc3139adec0d9325899.jpg"
+            },
+            {
+              "id": "moderne",
+              "title": "Le Marocain Moderne",
+              "subtitle": "Confort Contemporain",
+              "description": "La réinterprétation du salon traditionnel. Des lignes plus épurées, des dossiers capitonnés intégrés et une palette de couleurs audacieuse ou neutre. Le mariage parfait entre hospitalité et design actuel.",
+              "image": "https://www.decosalon-ma.com/wp-content/uploads/2022/04/Idee-deco-pour-salon-marocain-moderne.jpg"
+            },
+            {
+              "id": "l-shape",
+              "title": "Le Salon d'Angle (En L)",
+              "subtitle": "Espace & Fluidité",
+              "description": "Idéal pour structurer les espaces ouverts. Ce modèle offre une zone de conversation intime tout en dégageant la pièce. Parfait pour les salons familiaux.",
+              "image": "https://www.kitea.com/media/catalog/category/Salon_2.jpg"
+            },
+            {
+              "id": "sectional",
+              "title": "Le Sectionnel Modulaire",
+              "subtitle": "Grandeur & Flexibilité",
+              "description": "Pour les grands espaces. Un ensemble majestueux composé de multiples modules, incluant souvent des ottomans et des chaises longues pour un confort absolu.",
+              "image": "https://m.media-amazon.com/images/I/81VMOk5sOyL._AC_UF894,1000_QL80_.jpg"
+            },
+            {
+              "id": "minimalist",
+              "title": "Le Minimaliste",
+              "subtitle": "L'Épure Italienne",
+              "description": "Structure légère, pieds fins en métal ou bois, tissus en lin ou laine. Pour ceux qui cherchent la sérénité visuelle sans sacrifier le confort d'assise.",
+              "image": "https://cdn.mos.cms.futurecdn.net/4t5LAoSAjnypAMkAHTTau4.jpg"
+            }
+          ]
+        },
+        "beds": {
+          "featured": {
+            "image1": "https://www.roomservice360.com/media/catalog/product/cache/0a335442a5078be48cc73277f5c02d7b/f/i/filo-bed-qs-01.jpg",
+            "image2": "https://m.media-amazon.com/images/I/81XlfxmW6cL.jpg"
+          },
+          "models": [
+            {
+              "title": "Classique Capitonné",
+              "desc": "Boutons et rembourrage moelleux. Un confort visuel et tactile incomparable pour une chambre adulte élégante.",
+              "style": "Élégance Intemporelle",
+              "image": "https://m.media-amazon.com/images/I/51cNI2aihUL._AC_UF894,1000_QL80_.jpg"
+            },
+            {
+              "title": "Tête de Lit Moderne",
+              "desc": "Lignes épurées, tissu uni ou cuir. Le choix idéal pour un intérieur contemporain et minimaliste.",
+              "style": "Design & Épure",
+              "image": "https://kabeddings.com/cdn/shop/files/Queen-Stella-Bed-Grey-BF-B-STELLA-Q-LGY-9309001890629-1.jpg?v=1739079170&width=1080"
+            },
+            {
+              "title": "Avec Rangement",
+              "desc": "Étagères ou niches intégrées. L'alliance parfaite du design et de la fonctionnalité pour les espaces compacts.",
+              "style": "Pratique & Astucieux",
+              "image": "https://cdn.prod.website-files.com/65c18a9a4d6c9699ac22d7bd/67e0dcbf14e5b3f86609b86d_bedside-niches-32.webp"
+            },
+            {
+              "title": "Marocaine Traditionnelle",
+              "desc": "Motifs sculptés ou brodés. Une pièce maîtresse qui raconte une histoire artisanale et apporte une âme orientale.",
+              "style": "Authenticité & Charme",
+              "image": "https://radyinterior.ae/wp-content/uploads/2025/01/Moroccan-luxury-bedroom.webp"
+            },
+            {
+              "title": "Lit Plateforme",
+              "desc": "Structure basse, souvent en bois ou métal. Pour une atmosphère zen, inspirée du design japonais.",
+              "style": "Zen & Minimaliste",
+              "image": "https://gwsmasonry.com/wp-content/uploads/2024/10/minimalist-platform-bed-frame-1-1024x585.jpg"
+            },
+            {
+              "title": "King-Size Palace",
+              "desc": "Grande tête rembourrée ou cuir. Le luxe absolu pour les grands espaces et les suites parentales.",
+              "style": "Luxe & Grandeur",
+              "image": "https://bernadettelivingston.com/216-large_default/1-high-end-master-bedroom-set-carvings-and-tufted-leather-headboard.jpg"
+            }
+          ]
+        },
+        "curtains": {
+          "background": "https://reilly-chanceliving.com/cdn/shop/products/Velvet_panels_with_beads-velvet_drapes-dining_room_draperies-living_room_draperies-bedroom_curtains-reilly_chance.jpg?v=1757013524&width=1946",
+          "categories": {
+            "rideaux": "https://i.etsystatic.com/27498942/r/il/499be0/3677062599/il_fullxfull.3677062599_ietw.jpg",
+            "passementerie": "https://i.etsystatic.com/9711820/r/il/f53125/4960809090/il_570xN.4960809090_q6tl.jpg"
+          },
+          "blinds": [
+            {
+              "title": "Enrouleurs",
+              "subtitle": "Roller Blinds",
+              "desc": "Le minimalisme fonctionnel. Une toile technique qui s'enroule discrètement. Disponible en tissus tamisants ou occultants, opaque ou semi-transparent. Facile à nettoyer.",
+              "image": "https://www.stores-et-rideaux.com/data/Produit/stores-enrouleurs-screen-a-motifs/Photo-Liste---Store-Enrouleur-Screen-a-Motifs---NOV-2014.jpg"
+            },
+            {
+              "title": "Vénitiens",
+              "subtitle": "Venetian Blinds",
+              "desc": "Jeu d'ombre et de lumière. Lattes horizontales orientables en bois noble, aluminium ou PVC pour un contrôle précis de l'intimité.",
+              "image": "https://cdn.prod.website-files.com/605d169147d09561b4485ec3/6526c5e19ebd9b729845d65e_image1-4.jpg"
+            },
+            {
+              "title": "Stores Bateaux",
+              "subtitle": "Roman Blinds",
+              "desc": "L'élégance du drapé. Le tissu se lève en plis plats réguliers, apportant une touche décorative chaleureuse et sophistiquée.",
+              "image": "https://tristatescreens.com/wp-content/uploads/2023/10/1440-x-1200-Roman_F1079.jpg.webp"
+            },
+            {
+              "title": "Stores Plissés",
+              "subtitle": "Pleated Blinds",
+              "desc": "Géométrie douce. Un tissu plié en accordéon qui s'adapte à toutes les tailles de fenêtres, pour une esthétique légère et raffinée.",
+              "image": "https://m.media-amazon.com/images/I/810ij6r8BwL._AC_UF894,1000_QL80_.jpg"
+            },
+            {
+              "title": "Stores Verticaux",
+              "subtitle": "Vertical Blinds",
+              "desc": "Grandeur architecturale. Bandes verticales orientables, la solution idéale pour les grandes baies vitrées et portes coulissantes.",
+              "image": "https://images.squarespace-cdn.com/content/v1/564b8dd4e4b0459b2b819800/1449191509315-O25FP6AONZBX0WWHYOP1/91a8313e5942e5d50d3b4805e44dc7be.jpg?format=1000w"
+            },
+            {
+              "title": "Occultants",
+              "subtitle": "Blackout / Thermal",
+              "desc": "Nuit noire. Bloque totalement la lumière et offre une isolation thermique contre la chaleur ou le froid.",
+              "image": "https://m.media-amazon.com/images/I/71ItgqoM4lL.jpg_BO30,255,255,255_UF900,850_SR1910,1000,0,C_QL100_.jpg"
+            },
+            {
+              "title": "Motorisés",
+              "subtitle": "Smart Blinds",
+              "desc": "Domotique invisible. Ouverture et fermeture automatisées, intégrables à votre système de maison intelligente.",
+              "image": "https://www.sunburstshutters.com/img/corporate/uploads/motorizedshades55.jpg?t=1658861742"
+            }
+          ]
+        }
+      }
+  
+
