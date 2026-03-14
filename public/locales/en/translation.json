@@ -1,0 +1,247 @@
+{
+    "nav": {
+        "collections": "Collections",
+        "savoirFaire": "Savoir-Faire",
+        "cuisines": "Cuisines",
+        "meubles": "Mobilier",
+        "portfolio": "Portfolio",
+        "atelier": "Atelier",
+        "contact": "Contact",
+        "design": "Design"
+    },
+    "hero": {
+        "subtitle": "Artisanat de Luxe",
+        "title": "L'Art de Vivre Marocain",
+        "cta": "Découvrir nos Collections"
+    },
+    "contact": {
+        "title": "Contactez-nous",
+        "text": "L'atelier vous accueille pour un moment d'échange autour d'un thé à la menthe, pour discuter de vos besoins et imaginer ensemble votre intérieur.",
+        "name": "Votre Nom",
+        "email": "Votre Email",
+        "project": "Votre Projet (Optionnel)",
+        "send": "Prendre Rendez-vous",
+        "sending": "Envoi en cours...",
+        "sent": "Message Envoyé",
+        "error": "Erreur"
+    },
+    "services": {
+        "arabic_title": "خدماتنا",
+        "title": "Nos Services Exclusifs",
+        "renovation": {
+            "title": "Rénovation & Restauration",
+            "desc": "Réparation des structures en bois, remplacement du garnissage et restauration complète de fauteuils anciens."
+        },
+        "creation": {
+            "title": "Création Sur Mesure",
+            "desc": "Fabrication de salons marocains ou modernes adaptés exactement aux dimensions de votre espace."
+        },
+        "upholstery": {
+            "title": "Tapisserie & Revêtement",
+            "desc": "Pose experte de tissus, cuirs et velours avec options capitonné et finitions couture."
+        },
+        "curtains": {
+            "title": "Rideaux & Textiles",
+            "desc": "Confection de rideaux, stores et voilages pour une harmonie textile parfaite."
+        },
+        "advice": {
+            "title": "Conseil en Décoration",
+            "desc": "Accompagnement dans le choix des matières, des couleurs et l'agencement de votre intérieur."
+        },
+        "full_service": {
+            "title": "Service Clé en Main",
+            "desc": "Prise de mesures à domicile, fabrication, livraison et installation finale par nos équipes."
+        }
+    },
+    "collections": {
+        "salons": {
+            "arabic_title": "المجموعات",
+            "title": "Nos Collections Salon",
+            "subtitle": "Salon Marocain",
+            "model": "Modèle",
+            "configure": "Configurer"
+        },
+        "cuisines": {
+            "arabic_title": "المطابخ",
+            "title": "Moderne",
+            "subtitle": "Cuisines",
+            "desc": "L'alliance parfaite de l'esthétique et de la fonctionnalité. Nos cuisines sont conçues comme des œuvres d'art, intégrant des matériaux nobles et des technologies de pointe.",
+            "list1": "Plans de travail en marbre et quartz",
+            "list2": "Finitions laquées haute brillance",
+            "list3": "Agencement ergonomique sur mesure",
+            "bespoke_title": "Sur Mesure",
+            "card_explore": "Explorer",
+            "card_details": "Voir Détails",
+            "cta": "Créer Votre Cuisine",
+            "latest": "Derniers Projets",
+            "swipe": "Glisser"
+        }
+    },
+    "testimonials": {
+        "title": "Ce que disent nos clients",
+        "subtitle": "Témoignages",
+        "client1": {
+            "text": "La rénovation de notre lobby a été transformée par l'expertise Filali. Une fusion parfaite entre l'âme marocaine traditionnelle et une élégance contemporaine absolue.",
+            "author": "Directeur, Hôtel Royal Mansour",
+            "role": "Hôtellerie de Luxe"
+        },
+        "client2": {
+            "text": "Redonner vie à ce Riad historique demandait une sensibilité unique. L'artisanat en bois de cèdre et les tissus brodés à la main sont tout simplement exceptionnels.",
+            "author": "Jean-Pierre L.",
+            "role": "Restauration de Riad"
+        },
+        "client3": {
+            "text": "J'ai trouvé une écoute rare chez Filali Design. Mes pièces de collection sont sublimées par leur travail sur mesure. Un véritable partenaire artistique.",
+            "author": "Sarah B.",
+            "role": "Collectionneuse d'Art"
+        }
+    },
+    "story": {
+        "title": "L'Héritage Filali",
+        "subtitle": "Une Histoire de Passion",
+        "text1": "Fondé en 1985 par le Maître Artisan Hamid Filali, notre atelier incarne l'excellence de l'artisanat marocain. Né au cœur de Casablanca, Filali Design Co. est bien plus qu'une entreprise — c'est le gardien d'un héritage.",
+        "text2": "Nous croyons en la transmission du geste, de père en fils, de maître en apprenti. Mais la tradition ne se fige pas. Notre philosophie est d'évoluer sans jamais rompre le fil de l'authenticité (الأصالة).",
+        "materials_title": "Matières Nobles",
+        "materials_intro": "Nous sélectionnons nos matières avec une rigueur absolue, en privilégiant la qualité, la durabilité et l'émotion tactile.",
+        "mat1_name": "Velours Laine de l'Atlas",
+        "mat1_desc": "Tissé à la main au pied du Haut Atlas, reconnu pour sa profondeur lumineuse.",
+        "mat2_name": "Bois de Cèdre",
+        "mat2_desc": "Essence aromatique et éternelle, sculptée avec précision pour nos structures.",
+        "mat3_name": "Cuir Tanné Traditionnel",
+        "mat3_desc": "Une patine naturelle qui s'embellit avec le temps, travaillée à l'ancienne.",
+        "mat4_name": "Soie de Sabra",
+        "mat4_desc": "La noble fibre végétale, offrant des reflets changeants et une texture unique."
+    },
+    "faq": {
+        "title": "Questions Fréquentes",
+        "q1": "Intervenez-vous en dehors de Casablanca ?",
+        "a1": "Oui, notre service clé en main commence par une consultation virtuelle. Pour les étapes clés (mesures, installation), nos maîtres artisans se déplacent dans tout le Maroc et à l'international.",
+        "q2": "Quels sont vos délais de fabrication ?",
+        "a2": "Chaque pièce est unique. Comptez environ 4 à 8 semaines pour un salon sur mesure, selon la complexité des finitions et des tissus sélectionnés.",
+        "q3": "Puis-je personnaliser les dimensions ?",
+        "a3": "Absolument. Le « sur mesure » est notre essence. Nous adaptons chaque création au millimètre près pour votre espace.",
+        "q4": "Restaurez-vous des meubles anciens ?",
+        "a4": "Oui, nous disposons d'un département dédié à la restauration de pièces de patrimoine, dans le respect des techniques d'origine.",
+        "q5": "Comment entretenir le velours ?",
+        "a5": "Nous fournissons un guide d'entretien complet. Nos velours de qualité sont traités pour résister au temps ; un brossage délicat suffit souvent."
+    },
+    "contact_page": {
+        "title": "Parlons de Votre Projet",
+        "subtitle": "Consultation & Devis",
+        "visit_text": "Rien ne vaut une rencontre. Venez visiter notre atelier, toucher les matières et prendre un thé à la menthe avec nous.",
+        "form": {
+            "service_label": "Service Souhaité",
+            "desc_label": "Description du Projet",
+            "desc_placeholder": "Parlez-nous de vos envies...",
+            "submit": "Demander une Consultation"
+        },
+        "process_title": "Notre Processus",
+        "step1": "Consultation Initiale & Écoute",
+        "step2": "Prise de Mesures & Propositions",
+        "step3": "Fabrication Artisanale",
+        "step4": "Livraison & Installation Soignée"
+    },
+    "features": {
+        "heritage": {
+            "title_prefix": "Les Principes de la",
+            "title_suffix": "Tapisserie",
+            "desc": "Gardiens d'un savoir-faire ancestral, nos maîtres artisans perpétuent l'excellence des arts décoratifs marocains pour vos projets résidentiels, de père en fils.",
+            "cards": {
+                "transmission": {
+                    "title": "Transmission",
+                    "desc": "La tapisserie est un art hérité. Chaque geste, chaque point et chaque technique de garnissage perpétuent un savoir transmis de maître en apprenti."
+                },
+                "materials": {
+                    "title": "Matières Nobles",
+                    "desc": "Tissus, cuirs et garnissages sont choisis pour leur authenticité et leur durabilité. Aucune matière n'est utilisée sans comprendre son origine et son usage."
+                },
+                "proportions": {
+                    "title": "Proportions",
+                    "desc": "Chaque salon, banquette ou siège respecte des proportions éprouvées, garantissant confort, équilibre visuel et noblesse de l'ensemble."
+                }
+            }
+        },
+        "modernity": {
+            "title_prefix": "L'Évolution du",
+            "title_suffix": "Style",
+            "desc": "L'évolution ne rompt jamais avec la tradition. Une approche philosophique et patrimoniale qui préserve l'âme de l'artisanat ancien.",
+            "cards": {
+                "evolution": {
+                    "title": "Continuité",
+                    "desc": "L'évolution ne rompt jamais avec la tradition. Les formes, couleurs et volumes anciens s'adaptent avec retenue aux usages contemporains."
+                },
+                "unity": {
+                    "title": "Unité",
+                    "desc": "Salons, banquettes, têtes de lit, rideaux et coussins sont conçus comme un ensemble cohérent pour préserver l'âme et l'identité de l'espace."
+                },
+                "light": {
+                    "title": "Lumière",
+                    "desc": "Rideaux, voilages et stores textiles sont conçus pour filtrer la lumière en douceur, protéger l'intimité et sublimer matières et couleurs."
+                }
+            }
+        }
+    },
+    "process_section": {
+        "title": "Notre Processus",
+        "desc": "De l'idée à la réalité, nous vous accompagnons à chaque étape pour garantir l'excellence.",
+        "steps": [
+            {
+                "title": "Consultation",
+                "desc": "Rencontre et écoute de vos besoins."
+            },
+            {
+                "title": "Conception",
+                "desc": "Moodboard, plans et sélection des matières."
+            },
+            {
+                "title": "Fabrication",
+                "desc": "Création artisanale dans nos ateliers."
+            },
+            {
+                "title": "Installation",
+                "desc": "Livraison et mise en place finale."
+            }
+        ]
+    },
+    "workshop": {
+        "title": "Le Cœur Battant",
+        "subtitle": "Nos Ateliers",
+        "description": "Dans la pénombre sereine de nos ateliers casablancais, le temps semble suspendu. Sous les mains expertes de nos maîtres artisans, chaque geste, hérité et perpétué, insuffle à nos créations l'âme immémoriale du Maroc et la signature unique de la Maison Filali.",
+        "quote": "« Ici, chaque pièce naît du silence, du murmure du bois et de la mémoire des mains qui perpétuent les secrets d'antan. »",
+        "items": {
+            "carpentry": {
+                "title": "Menuiserie d'Art",
+                "desc": "Bois sculpté avec précision dans nos ateliers"
+            },
+            "sewing": {
+                "title": "Couture & Textiles",
+                "desc": "L'art du fil et de l'aiguille pour des finitions parfaites"
+            },
+            "upholstery": {
+                "title": "Tapisserie & Assemblage",
+                "desc": "Montage artisanal de fauteuils et canapés"
+            },
+            "zouaq": {
+                "title": "Zouaq & Finitions",
+                "desc": "Peinture traditionnelle et ornements peints à la main"
+            }
+        }
+    },
+    "moodboard": {
+        "title": "Votre Sélection",
+        "count": "{{count}} article(s) sélectionné(s)",
+        "send_inquiry": "Envoyer Ma Demande",
+        "empty": "Aucune sélection",
+        "add": "Ajouter à la sélection",
+        "remove": "Retirer de la sélection"
+    },
+    "seo": {
+        "home": {
+            "title": "Filali Design Co. | Artisanat Marocain de Luxe",
+            "description": "Découvrez Filali Design Co., l'excellence de l'artisanat marocain. Salons sur mesure, cuisines modernes et rénovation d'intérieur haut de gamme."
+        },
+        "admin": {
+            "title": "Admin | Filali Design Co."
+        }
+    }
+}

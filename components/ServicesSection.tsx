@@ -1,50 +1,53 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { HammerIcon, SofaIcon, PaletteIcon, CompassIcon } from './Icons';
 
 // Reuse existing icons or define specific ones inline for simplicity
 const NeedleIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><path d="m12 2 4 4-8.25 8.25c-.2.2-.5.3-.8.3h-2.2c-.6 0-1-.4-1-1v-2.2c0-.3.1-.6.3-.8L12 2Z"/><path d="m16 6 2 2"/><path d="M19.07 4.93 17 2.86a2.83 2.83 0 1 0-4 4l2.07-2.07"/><path d="M10 22h4"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><path d="m12 2 4 4-8.25 8.25c-.2.2-.5.3-.8.3h-2.2c-.6 0-1-.4-1-1v-2.2c0-.3.1-.6.3-.8L12 2Z" /><path d="m16 6 2 2" /><path d="M19.07 4.93 17 2.86a2.83 2.83 0 1 0-4 4l2.07-2.07" /><path d="M10 22h4" /></svg>
 );
 
 const TruckIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><path d="M10 17h4V5H2v12h3"/><path d="M20 17h2v-3.34a4 4 0 0 0-1.17-2.83L19 9h-5"/><path d="M14 17h1"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><path d="M10 17h4V5H2v12h3" /><path d="M20 17h2v-3.34a4 4 0 0 0-1.17-2.83L19 9h-5" /><path d="M14 17h1" /><circle cx="7.5" cy="17.5" r="2.5" /><circle cx="17.5" cy="17.5" r="2.5" /></svg>
 );
 
-const services = [
-  {
-    icon: <HammerIcon className="w-8 h-8" />,
-    title: "Rénovation & Restauration",
-    desc: "Réparation de structures en bois, remplacement de rembourrage et restauration complète de fauteuils anciens.",
-  },
-  {
-    icon: <SofaIcon className="w-8 h-8" />,
-    title: "Création Sur Mesure",
-    desc: "Fabrication de salons marocains ou modernes adaptés exactement aux dimensions de votre espace.",
-  },
-  {
-    icon: <NeedleIcon />,
-    title: "Tapissage & Revêtement",
-    desc: "Pose experte de tissus, cuirs et velours avec options de capitonnage et finitions couture.",
-  },
-  {
-    icon: <CompassIcon className="w-8 h-8" />,
-    title: "Rideaux & Textiles",
-    desc: "Confection de rideaux, stores et voilages sur mesure pour une harmonie textile parfaite.",
-  },
-  {
-    icon: <PaletteIcon className="w-8 h-8" />,
-    title: "Conseil en Décoration",
-    desc: "Accompagnement dans le choix des matières, des couleurs et l'agencement de votre intérieur.",
-  },
-  {
-    icon: <TruckIcon />,
-    title: "Service Complet A-Z",
-    desc: "Prise de mesures à domicile, fabrication, livraison et installation finale par nos équipes.",
-  },
-];
-
 const ServicesSection: React.FC = () => {
+  const { t } = useTranslation();
+
+  const services = [
+    {
+      icon: <HammerIcon className="w-8 h-8" />,
+      title: t('services.renovation.title'),
+      desc: t('services.renovation.desc'),
+    },
+    {
+      icon: <SofaIcon className="w-8 h-8" />,
+      title: t('services.creation.title'),
+      desc: t('services.creation.desc'),
+    },
+    {
+      icon: <NeedleIcon />,
+      title: t('services.upholstery.title'),
+      desc: t('services.upholstery.desc'),
+    },
+    {
+      icon: <CompassIcon className="w-8 h-8" />,
+      title: t('services.curtains.title'),
+      desc: t('services.curtains.desc'),
+    },
+    {
+      icon: <PaletteIcon className="w-8 h-8" />,
+      title: t('services.advice.title'),
+      desc: t('services.advice.desc'),
+    },
+    {
+      icon: <TruckIcon />,
+      title: t('services.full_service.title'),
+      desc: t('services.full_service.desc'),
+    },
+  ];
+
   return (
     <section className="py-24 px-6 bg-riad-white text-riad-brown relative">
       <div className="container mx-auto max-w-7xl">
@@ -55,10 +58,10 @@ const ServicesSection: React.FC = () => {
             viewport={{ once: true }}
             className="font-arabic text-5xl text-riad-gold mb-2"
           >
-            خدماتنا
+            {t('services.arabic_title')}
           </motion.div>
-          <h2 className="font-royal text-4xl uppercase tracking-[0.2em] text-riad-red font-light">
-            Nos Services Exclusifs
+          <h2 className={`font-royal text-4xl uppercase tracking-[0.2em] text-riad-red font-light`}>
+            {t('services.title')}
           </h2>
           <div className="w-24 h-[1px] bg-riad-gold mx-auto mt-6"></div>
         </div>
@@ -76,10 +79,10 @@ const ServicesSection: React.FC = () => {
               <div className="w-16 h-16 bg-riad-blue text-riad-gold rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
                 {service.icon}
               </div>
-              <h3 className="font-royal text-xl uppercase tracking-widest mb-4 text-riad-brown group-hover:text-riad-red transition-colors">
+              <h3 className={`font-royal text-xl uppercase tracking-widest mb-4 text-riad-brown group-hover:text-riad-red transition-colors`}>
                 {service.title}
               </h3>
-              <p className="font-elegant text-lg text-riad-brown/70 leading-relaxed">
+              <p className={`font-elegant text-lg text-riad-brown/70 leading-relaxed`}>
                 {service.desc}
               </p>
             </motion.div>

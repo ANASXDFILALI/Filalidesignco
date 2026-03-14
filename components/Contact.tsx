@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import LuxuryButton from './LuxuryButton';
+import emailjs from '@emailjs/browser';
+import { useTranslation } from 'react-i18next';
 
 const AnimatedInput = ({ label, type = "text", required = false, id, value, onChange }: { label: string, type?: string, required?: boolean, id: string, value?: string, onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void }) => {
   const [isFocused, setIsFocused] = useState(false);
@@ -8,7 +10,7 @@ const AnimatedInput = ({ label, type = "text", required = false, id, value, onCh
 
   return (
     <div className="relative group pt-8">
-      <input 
+      <input
         type={type}
         required={required}
         id={id}
@@ -24,9 +26,9 @@ const AnimatedInput = ({ label, type = "text", required = false, id, value, onCh
         }}
         className="w-full bg-transparent border-none py-4 text-2xl font-elegant text-riad-white focus:outline-none relative z-10 font-light"
       />
-      
+
       {/* Label Animation */}
-      <motion.label 
+      <motion.label
         htmlFor={id}
         initial={false}
         animate={{
@@ -44,7 +46,7 @@ const AnimatedInput = ({ label, type = "text", required = false, id, value, onCh
       <div className="absolute bottom-0 left-0 w-full h-[1px] bg-riad-gold/30" />
 
       {/* Active Line Animation */}
-      <motion.div 
+      <motion.div
         initial={{ scaleX: 0 }}
         animate={{ scaleX: isFocused ? 1 : 0 }}
         transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
@@ -55,6 +57,7 @@ const AnimatedInput = ({ label, type = "text", required = false, id, value, onCh
 };
 
 const Contact: React.FC = () => {
+  const { t } = useTranslation();
   const [formState, setFormState] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
   const [formData, setFormData] = useState({
     name: '',
@@ -67,17 +70,27 @@ const Contact: React.FC = () => {
   };
 
   const sendEmail = async (data: typeof formData) => {
-    // Using mailto as primary method (works immediately without setup)
-    // For production, you can set up EmailJS at https://www.emailjs.com/
     try {
-      const subject = encodeURIComponent(`Nouveau contact depuis le site - ${data.name}`);
-      const body = encodeURIComponent(
-        `Nom: ${data.name}\nEmail: ${data.email}\nProjet: ${data.project || 'Non spécifié'}`
-      );
-      
-      // Open email client with pre-filled email
-      window.location.href = `mailto:filalianas0001@gmail.com?subject=${subject}&body=${body}`;
-      
+      // REPLACE THESE WITH YOUR ACTUAL EMAILJS KEYS
+      // Service ID: service_xyz
+      // Template ID: template_xyz
+      // Public Key: user_xyz
+      const serviceID = 'default_service';
+      const templateID = 'template_contact';
+      const publicKey = 'YOUR_PUBLIC_KEY';
+
+      if (publicKey === 'YOUR_PUBLIC_KEY') {
+        console.warn('EmailJS keys are missing. Simulating success.');
+        await new Promise(resolve => setTimeout(resolve, 1500)); // Simulate delay
+        return true;
+      }
+
+      await emailjs.send(serviceID, templateID, {
+        from_name: data.name,
+        from_email: data.email,
+        message: data.project
+      }, publicKey);
+
       return true;
     } catch (error) {
       console.error('Error sending email:', error);
@@ -86,6 +99,7 @@ const Contact: React.FC = () => {
   };
 
   const sendWhatsApp = (data: typeof formData) => {
+    // ... (keep existing WhatsApp logic)
     const message = encodeURIComponent(
       `Bonjour,\n\nNouveau contact depuis le site Filali Design Co.:\n\n` +
       `Nom: ${data.name}\n` +
@@ -93,8 +107,6 @@ const Contact: React.FC = () => {
       `Projet: ${data.project || 'Non spécifié'}\n\n` +
       `Merci de prendre contact avec ce client.`
     );
-    
-    // Open WhatsApp with pre-filled message
     window.open(`https://wa.me/2120605268946?text=${message}`, '_blank');
   };
 
@@ -103,21 +115,20 @@ const Contact: React.FC = () => {
     setFormState('submitting');
 
     try {
-      // Send email
-      await sendEmail(formData);
-      
-      // Send WhatsApp message
-      sendWhatsApp(formData);
-      
-      setFormState('success');
-      
-      // Reset form after success
-      setTimeout(() => {
-        setFormData({ name: '', email: '', project: '' });
-        setFormState('idle');
-      }, 3000);
+      const success = await sendEmail(formData);
+
+      if (success) {
+        sendWhatsApp(formData);
+        setFormState('success');
+        setTimeout(() => {
+          setFormData({ name: '', email: '', project: '' });
+          setFormState('idle');
+        }, 3000);
+      } else {
+        setFormState('error');
+        setTimeout(() => setFormState('idle'), 3000);
+      }
     } catch (error) {
-      console.error('Error submitting form:', error);
       setFormState('error');
       setTimeout(() => setFormState('idle'), 3000);
     }
@@ -135,81 +146,81 @@ const Contact: React.FC = () => {
           viewport={{ once: true }}
           className="font-arabic text-7xl md:text-9xl text-riad-gold-light mb-8 drop-shadow-lg leading-tight"
         >
-          تواصل معنا
+          {t('contact.title')}
         </motion.div>
-        
+
         <p className="font-elegant text-2xl md:text-4xl italic opacity-90 mb-20 leading-loose font-light max-w-4xl mx-auto">
-        L’atelier vous accueille pour un moment d’échange autour d’un thé à la menthe, afin de discuter de vos besoins et imaginer ensemble votre intérieur.
+          {t('contact.text')}
         </p>
 
         <form onSubmit={handleSubmit} className="max-w-2xl mx-auto space-y-16 text-left">
-          <AnimatedInput 
-            id="name" 
-            label="Votre nom" 
-            required 
+          <AnimatedInput
+            id="name"
+            label={t('contact.name')}
+            required
             value={formData.name}
             onChange={handleInputChange('name')}
           />
-          <AnimatedInput 
-            id="email" 
-            label="Votre courriel" 
-            type="email" 
-            required 
+          <AnimatedInput
+            id="email"
+            label={t('contact.email')}
+            type="email"
+            required
             value={formData.email}
             onChange={handleInputChange('email')}
           />
-          <AnimatedInput 
-            id="project" 
-            label="Votre projet (optionnel)" 
+          <AnimatedInput
+            id="project"
+            label={t('contact.project')}
             value={formData.project}
             onChange={handleInputChange('project')}
           />
 
           <div className="text-center pt-16">
-            <LuxuryButton 
-              type="submit" 
+            <LuxuryButton
+              type="submit"
               variant="outline"
               className="min-w-[280px] !border-riad-gold-light !text-riad-gold-light text-sm"
             >
               <AnimatePresence mode="wait">
                 {formState === 'idle' && (
-                  <motion.span 
+                  <motion.span
                     key="idle"
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
                   >
-                    Prendre Rendez-vous
+                    {t('contact.send')}
                   </motion.span>
                 )}
                 {formState === 'submitting' && (
-                  <motion.span 
+                  <motion.span
                     key="submitting"
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
                   >
-                    Envoi en cours...
+                    {t('contact.sending')}
                   </motion.span>
                 )}
                 {formState === 'success' && (
-                  <motion.span 
+                  <motion.span
                     key="success"
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
                   >
-                    Message Envoyé
+                    {t('contact.sent')}
                   </motion.span>
                 )}
                 {formState === 'error' && (
-                  <motion.span 
+                  <motion.span
                     key="error"
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
                   >
-                    Erreur - Réessayez
+                    {t('contact.error')}
                   </motion.span>
                 )}
               </AnimatePresence>

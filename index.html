@@ -1,83 +1,115 @@
 <!DOCTYPE html>
 <html lang="fr" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Filali Design Co. | Riad Digital</title>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Marcellus&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              'riad-red': '#5c1a1a',
-              'riad-brown': '#3d2719',
-              'riad-white': '#f8f5f0',
-              'riad-blue': '#0a1f29',
-              'riad-sand': '#d4b596',
-              'riad-gold': '#b89446',
-              'riad-gold-leaf': '#d4af37',
-              'riad-gold-light': '#E6C76C',
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Title and Meta managed by React Helmet Async -->
+
+  <!-- Moroccan Market SEO -->
+  <meta name="language" content="fr, ar" />
+  <meta name="geo.region" content="MA-CAS" />
+  <meta name="geo.placename" content="Casablanca, Maroc" />
+  <meta name="geo.position" content="33.5731;-7.5898" />
+  <meta name="ICBM" content="33.5731, -7.5898" />
+  <meta name="keywords" content="salon marocain sur mesure Casablanca, tapisserie Maroc, décoration intérieure luxe Maroc, صالون مغربي الدار البيضاء, تنجيد المغرب, mobilier marocain artisanal, rideau sur mesure Casablanca, cuisine moderne Maroc, Filali Design, ameublement luxe Casablanca" />
+  <meta name="author" content="Filali Design Co." />
+  <meta name="theme-color" content="#C5A059" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Marcellus&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'riad-red': '#5c1a1a', // Deep, rich velvet red
+            'riad-brown': '#3d2719', // Dark wood
+            'riad-white': '#f8f5f0', // Creamy marble
+            'riad-blue': '#0a1f29', // Midnight garden night
+            'riad-sand': '#d4b596', // Warm tadelakt
+            'riad-gold': '#C5A059', // Metallic gold (base)
+            'riad-gold-leaf': '#D4AF37', // Bright gold leaf
+            'riad-gold-light': '#E6C76C', // Pale gold highlight
+            'riad-gold-dark': '#997B3D', // Shadow gold
+          },
+          fontFamily: {
+            arabic: ['Amiri', 'serif'],
+            royal: ['Cinzel', 'serif'],
+            elegant: ['Cormorant Garamond', 'serif'],
+            classic: ['Marcellus', 'serif'],
+          },
+          backgroundImage: {
+            'gold-gradient': 'linear-gradient(135deg, #C5A059 0%, #F4E4A6 50%, #D4AF37 100%)',
+            'gold-glow': 'radial-gradient(circle at center, rgba(212, 175, 55, 0.4) 0%, transparent 70%)',
+            'patio-fade': 'linear-gradient(to top, #0a1f29 0%, transparent 100%)',
+            'glass': 'linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05))',
+          },
+          boxShadow: {
+            'deep': '0 25px 50px -12px rgba(0, 0, 0, 0.45)',
+            'gold': '0 0 30px rgba(212, 175, 55, 0.2)',
+            'gold-hover': '0 0 40px rgba(212, 175, 55, 0.4)',
+            'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
+          },
+          backdropBlur: {
+            'xs': '2px',
+          },
+          animation: {
+            'float': 'float 15s ease-in-out infinite',
+            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'rotate-slow': 'spin 60s linear infinite',
+            'subtle-zoom': 'subtle-zoom 30s ease-in-out infinite',
+            'fade-up': 'fadeUp 1s ease-out forwards',
+            'shimmer': 'shimmer 2.5s infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0) scale(1)' },
+              '50%': { transform: 'translateY(-20px) scale(1.02)' },
             },
-            fontFamily: {
-              arabic: ['Amiri', 'serif'],
-              royal: ['Cinzel', 'serif'],
-              elegant: ['Cormorant Garamond', 'serif'],
-              classic: ['Marcellus', 'serif'],
+            'subtle-zoom': {
+              '0%, 100%': { transform: 'scale(1.0)' },
+              '50%': { transform: 'scale(1.05)' },
             },
-            backgroundImage: {
-              'gold-gradient': 'linear-gradient(135deg, #b89446 0%, #f4e4a6 50%, #d4af37 100%)',
-              'gold-glow': 'radial-gradient(circle at center, rgba(212, 175, 55, 0.4) 0%, transparent 70%)',
-              'patio-fade': 'linear-gradient(to top, #0a1f29 0%, transparent 100%)',
+            fadeUp: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
             },
-            boxShadow: {
-              'deep': '0 25px 50px -12px rgba(0, 0, 0, 0.45)',
-              'gold': '0 0 30px rgba(212, 175, 55, 0.3)',
-            },
-            animation: {
-              'float': 'float 15s ease-in-out infinite',
-              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-              'rotate-slow': 'spin 60s linear infinite',
-              'subtle-zoom': 'subtle-zoom 30s ease-in-out infinite',
-            },
-            keyframes: {
-              float: {
-                '0%, 100%': { transform: 'translateY(0) scale(1)' },
-                '50%': { transform: 'translateY(-100px) scale(1.2)' },
-              },
-              'subtle-zoom': {
-                '0%, 100%': { transform: 'scale(1.05)' },
-                '50%': { transform: 'scale(1.15)' },
-              }
+            shimmer: {
+              '100%': { transform: 'translateX(100%)' },
             }
           }
         }
       }
-    </script>
-    <style>
-      /* Custom scrollbar for Webkit */
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #f8f5f0; 
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #b89446; 
-        border-radius: 4px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #5c1a1a; 
-      }
-    </style>
+    }
+  </script>
+  <style>
+    /* Custom scrollbar for Webkit */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f8f5f0;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #b89446;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #5c1a1a;
+    }
+  </style>
   <script type="importmap">
 {
   "imports": {
@@ -89,10 +121,13 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
+  <link rel="stylesheet" href="/index.css">
 </head>
-  <body class="bg-riad-white text-riad-brown font-elegant antialiased overflow-x-hidden selection:bg-riad-gold selection:text-white">
-    <div id="root"></div>
+
+<body
+  class="bg-riad-white text-riad-brown font-elegant antialiased overflow-x-hidden selection:bg-riad-gold selection:text-white">
+  <div id="root"></div>
   <script type="module" src="/index.tsx"></script>
 </body>
+
 </html>

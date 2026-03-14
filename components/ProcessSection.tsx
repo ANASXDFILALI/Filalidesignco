@@ -1,31 +1,34 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-
-const steps = [
-  { id: '01', title: 'Consultation', desc: 'Rencontre et écoute de vos besoins.' },
-  { id: '02', title: 'Design', desc: 'Moodboard, plans et sélection des matières.' },
-  { id: '03', title: 'Fabrication', desc: 'Réalisation artisanale dans nos ateliers.' },
-  { id: '04', title: 'Installation', desc: 'Livraison et mise en place finale.' },
-];
+import { useTranslation } from 'react-i18next';
 
 const ProcessSection: React.FC = () => {
+  const { t } = useTranslation();
+
+  const steps = [
+    { id: '01', title: t('process_section.steps.0.title'), desc: t('process_section.steps.0.desc') },
+    { id: '02', title: t('process_section.steps.1.title'), desc: t('process_section.steps.1.desc') },
+    { id: '03', title: t('process_section.steps.2.title'), desc: t('process_section.steps.2.desc') },
+    { id: '04', title: t('process_section.steps.3.title'), desc: t('process_section.steps.3.desc') },
+  ];
+
   return (
     <section className="py-20 px-6 bg-riad-blue text-riad-white border-t border-riad-gold/20">
       <div className="container mx-auto max-w-7xl">
         <div className="flex flex-col md:flex-row justify-between items-center gap-12">
-          
+
           <div className="md:w-1/3 text-center md:text-left">
             <h2 className="font-royal text-3xl uppercase tracking-[0.2em] mb-4 text-riad-gold-light">
-              La Démarche
+              {t('process_section.title')}
             </h2>
             <p className="font-elegant text-xl opacity-80 leading-relaxed">
-              De l'idée à la réalité, nous vous accompagnons à chaque étape pour garantir l'excellence.
+              {t('process_section.desc')}
             </p>
           </div>
 
           <div className="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 w-full">
             {steps.map((step, idx) => (
-              <motion.div 
+              <motion.div
                 key={idx}
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}

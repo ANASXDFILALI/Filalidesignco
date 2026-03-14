@@ -1,11 +1,17 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
-import imagesData from '../images.json';
-
-const images = imagesData.gallery.images;
+import { useProject } from '../context/ProjectContext';
 
 const Gallery: React.FC = () => {
+  const { albums } = useProject();
+  const galleryAlbum = albums.find(a => a.category === 'gallery');
+  const images = (galleryAlbum?.images || []).map(img => ({
+    src: img.src,
+    alt: img.caption || '',
+    title: img.caption?.split(' - ')[0] || '',
+    subtitle: img.caption?.split(' - ').slice(1).join(' - ') || '',
+  }));
   const [selectedImage, setSelectedImage] = useState<null | typeof images[0]>(null);
 
   return (
@@ -18,7 +24,7 @@ const Gallery: React.FC = () => {
       <div className="container mx-auto max-w-7xl relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-12">
           <div className="max-w-3xl">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -60 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.5 }}
@@ -27,7 +33,7 @@ const Gallery: React.FC = () => {
             >
               حيث يولد الإتقان
             </motion.div>
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.5 }}
@@ -36,19 +42,19 @@ const Gallery: React.FC = () => {
             >
               LE CŒUR BATTANT : NOS ATELIERS
             </motion.h2>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
               className="font-elegant text-2xl md:text-3xl text-riad-brown/85 leading-loose font-light max-w-2xl"
             >
-              Dans la pénombre sereine de nos ateliers casablancais, le temps semble suspendu. 
-              Sous les mains expertes de nos maîtres-artisans, chaque geste, hérité et perpétué, 
+              Dans la pénombre sereine de nos ateliers casablancais, le temps semble suspendu.
+              Sous les mains expertes de nos maîtres-artisans, chaque geste, hérité et perpétué,
               insuffle à nos créations l'âme immémoriale du Maroc et la signature unique de la Maison Filali.
             </motion.p>
           </div>
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, width: 0 }}
             whileInView={{ opacity: 1, width: "100%" }}
             viewport={{ once: true }}
@@ -65,13 +71,13 @@ const Gallery: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.8, delay: idx * 0.2, ease: "easeOut" }}
-              whileHover={{ y: -20, scale: 1.04 }}
+              whileHover={{ y: -15, scale: 1.02 }}
               onClick={() => setSelectedImage(img)}
-              className="group relative aspect-square overflow-hidden rounded-xl border-2 border-riad-gold/40 cursor-pointer shadow-2xl hover:shadow-3xl hover:border-riad-gold-light transition-all duration-700"
+              className="group relative aspect-square overflow-hidden rounded-sm border border-riad-gold/20 cursor-pointer shadow-deep hover:shadow-gold-hover hover:border-riad-gold-light/60 transition-all duration-700"
             >
-              <img 
-                src={img.src} 
-                alt={img.alt} 
+              <img
+                src={img.src}
+                alt={img.alt}
                 className="w-full h-full object-cover transition-all duration-1200 group-hover:scale-115 sepia-[0.5] group-hover:sepia-0 brightness-95 group-hover:brightness-105"
                 loading="lazy"
               />
@@ -96,7 +102,7 @@ const Gallery: React.FC = () => {
           ))}
         </div>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -119,13 +125,13 @@ const Gallery: React.FC = () => {
             className="fixed inset-0 z-[1000] bg-black/95 flex items-center justify-center p-4 md:p-10 cursor-zoom-out"
             onClick={() => setSelectedImage(null)}
           >
-            <button 
+            <button
               className="absolute top-8 right-8 text-white/50 hover:text-white transition-colors"
               onClick={() => setSelectedImage(null)}
             >
               <X size={48} />
             </button>
-            
+
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
@@ -133,8 +139,8 @@ const Gallery: React.FC = () => {
               className="relative max-w-7xl w-full max-h-[90vh] flex flex-col items-center"
               onClick={(e) => e.stopPropagation()} // Prevent close on image click
             >
-              <img 
-                src={selectedImage.src} 
+              <img
+                src={selectedImage.src}
                 alt={selectedImage.alt}
                 className="max-h-[80vh] w-auto object-contain border border-riad-gold/20 shadow-2xl"
               />
