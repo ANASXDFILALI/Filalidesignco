@@ -49,9 +49,12 @@ const ArticleCard: React.FC<{ article: BlogArticle; idx: number }> = ({ article,
   >
     {/* Card image area */}
     <div className="relative h-48 bg-gradient-to-br from-riad-brown/40 to-riad-blue overflow-hidden flex-shrink-0">
-      <div className="absolute inset-0 flex items-center justify-center opacity-10 group-hover:opacity-20 transition-opacity duration-500">
-        <span className="font-arabic text-8xl text-riad-gold">م</span>
-      </div>
+      <img
+        src={article.image}
+        alt={article.title}
+        className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700"
+        loading="lazy"
+      />
       <div className="absolute inset-0 bg-gradient-to-t from-riad-blue/80 to-transparent" />
       {/* City badge */}
       <span className="absolute top-4 left-4 px-3 py-1 bg-riad-gold text-riad-blue text-[10px] font-royal uppercase tracking-[0.15em]">

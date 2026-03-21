@@ -1,9 +1,28 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import SEO from '../../components/SEO';
 import CustomCursor from '../../components/CustomCursor';
+import { SITE_URL } from '../../lib/constants';
+
+const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': `${SITE_URL}/#organization`,
+    name: 'Filali Design Co.',
+    foundingDate: '1985',
+    founder: { '@type': 'Person', name: 'Hamid Filali' },
+    url: SITE_URL,
+    logo: { '@type': 'ImageObject', url: `${SITE_URL}/logo.png` },
+    description: 'Atelier familial d\'artisanat marocain fondé en 1985 à Casablanca par Hamid Filali. Spécialiste des salons marocains sur mesure, tapisserie, rideaux et décoration d\'intérieur de luxe.',
+    address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Casablanca',
+        addressCountry: 'MA',
+    },
+};
 
 const fadeUp = {
     initial: { opacity: 0, y: 30 },
@@ -44,6 +63,9 @@ const Story: React.FC = () => {
     return (
         <div className="bg-[#FAF9F6] min-h-screen cursor-none text-riad-brown">
             <SEO titleKey="seo.story.title" descriptionKey="seo.story.description" />
+            <Helmet>
+                <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
+            </Helmet>
             <CustomCursor />
             <Navbar />
 

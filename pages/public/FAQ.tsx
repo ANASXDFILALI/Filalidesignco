@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
@@ -64,20 +64,19 @@ const FAQ: React.FC = () => {
                                         className={`transition-transform duration-300 ${activeIndex === idx ? 'rotate-180 text-riad-gold' : 'text-gray-500'}`}
                                     />
                                 </button>
-                                <AnimatePresence>
-                                    {activeIndex === idx && (
-                                        <motion.div
-                                            initial={{ height: 0, opacity: 0 }}
-                                            animate={{ height: "auto", opacity: 1 }}
-                                            exit={{ height: 0, opacity: 0 }}
-                                            className="overflow-hidden"
-                                        >
-                                            <p className="pb-8 font-elegant text-lg text-riad-white/70 leading-relaxed">
-                                                {item.a}
-                                            </p>
-                                        </motion.div>
-                                    )}
-                                </AnimatePresence>
+                                <motion.div
+                                    animate={{
+                                        height: activeIndex === idx ? "auto" : 0,
+                                        opacity: activeIndex === idx ? 1 : 0,
+                                    }}
+                                    initial={false}
+                                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                                    className="overflow-hidden"
+                                >
+                                    <p className="pb-8 font-elegant text-lg text-riad-white/70 leading-relaxed">
+                                        {item.a}
+                                    </p>
+                                </motion.div>
                             </div>
                         ))}
                     </div>

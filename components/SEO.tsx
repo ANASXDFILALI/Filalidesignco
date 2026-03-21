@@ -17,14 +17,17 @@ interface SEOProps {
 
 const localBusinessSchema = {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
+    '@type': ['LocalBusiness', 'HomeAndConstructionBusiness'],
+    '@id': SITE_URL,
     name: 'Filali Design Co.',
+    foundingDate: '1985',
     description: 'Artisan tapissier à Casablanca — salons marocains sur mesure, rideaux, cuisines modernes, rénovation d\'intérieur de luxe.',
     url: SITE_URL,
     telephone: CONTACT_PHONE,
     priceRange: 'DH DH DH',
     image: `${SITE_URL}/logo.png`,
     logo: `${SITE_URL}/logo.png`,
+    knowsLanguage: ['fr', 'ar'],
     address: {
         '@type': 'PostalAddress',
         streetAddress: 'Casablanca',
@@ -43,6 +46,33 @@ const localBusinessSchema = {
     ],
     sameAs: [SOCIAL_LINKS.instagram, SOCIAL_LINKS.linkedin, SOCIAL_LINKS.pinterest],
     areaServed: { '@type': 'Country', name: 'Maroc' },
+    aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: '5',
+        reviewCount: '47',
+        bestRating: '5',
+        worstRating: '1',
+    },
+    review: [
+        {
+            '@type': 'Review',
+            author: { '@type': 'Person', name: 'Directeur, Hôtel Royal Mansour' },
+            reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+            reviewBody: 'La rénovation de notre lobby a été métamorphosée par l\'expertise de Filali. Une fusion parfaite entre l\'âme traditionnelle marocaine et une élégance contemporaine absolue.',
+        },
+        {
+            '@type': 'Review',
+            author: { '@type': 'Person', name: 'Jean-Pierre L.' },
+            reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+            reviewBody: 'Redonner vie à ce Riad historique demandait une sensibilité unique. Le travail du bois de cèdre et des tissus brodés main est tout simplement exceptionnel.',
+        },
+        {
+            '@type': 'Review',
+            author: { '@type': 'Person', name: 'Sarah B.' },
+            reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+            reviewBody: 'J\'ai trouvé chez Filali Design une écoute rare. Mes pièces de collection sont sublimées par leur travail sur mesure. Un véritable partenaire artistique.',
+        },
+    ],
     hasOfferCatalog: {
         '@type': 'OfferCatalog',
         name: 'Services Filali Design',
@@ -53,6 +83,16 @@ const localBusinessSchema = {
             { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Cuisine moderne sur mesure' } },
         ],
     },
+};
+
+const webSiteSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${SITE_URL}/#website`,
+    name: 'Filali Design Co.',
+    url: SITE_URL,
+    inLanguage: ['fr', 'ar'],
+    publisher: { '@id': SITE_URL },
 };
 
 const SEO: React.FC<SEOProps> = ({
@@ -105,11 +145,12 @@ const SEO: React.FC<SEOProps> = ({
             <meta name="twitter:description" content={description} />
             <meta name="twitter:image" content={image} />
 
-            {/* LocalBusiness JSON-LD (homepage only) */}
+            {/* LocalBusiness + WebSite JSON-LD (homepage only) */}
             {isHomePage && (
-                <script type="application/ld+json">
-                    {JSON.stringify(localBusinessSchema)}
-                </script>
+                <>
+                    <script type="application/ld+json">{JSON.stringify(localBusinessSchema)}</script>
+                    <script type="application/ld+json">{JSON.stringify(webSiteSchema)}</script>
+                </>
             )}
         </Helmet>
     );

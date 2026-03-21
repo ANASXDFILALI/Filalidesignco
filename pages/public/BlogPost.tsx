@@ -59,6 +59,12 @@ const BlogPost: React.FC = () => {
     '@type': 'BlogPosting',
     headline: article.title,
     description: article.metaDescription,
+    image: {
+      '@type': 'ImageObject',
+      url: article.image.startsWith('http') ? article.image : `${SITE_URL}${article.image}`,
+      width: 1200,
+      height: 630,
+    },
     datePublished: article.date,
     dateModified: article.date,
     author: {
@@ -72,6 +78,7 @@ const BlogPost: React.FC = () => {
       logo: { '@type': 'ImageObject', url: `${SITE_URL}/logo.png` },
     },
     url: `${SITE_URL}/blog/${article.slug}`,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE_URL}/blog/${article.slug}` },
     keywords: article.tags.join(', '),
     articleSection: categoryLabels[article.category],
     inLanguage: 'fr-MA',
@@ -79,6 +86,16 @@ const BlogPost: React.FC = () => {
       '@type': 'Thing',
       name: article.city,
     },
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Accueil', item: `${SITE_URL}/` },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE_URL}/blog` },
+      { '@type': 'ListItem', position: 3, name: article.title, item: `${SITE_URL}/blog/${article.slug}` },
+    ],
   };
 
   return (
@@ -94,6 +111,9 @@ const BlogPost: React.FC = () => {
         <meta property="og:title" content={article.metaTitle} />
         <meta property="og:description" content={article.metaDescription} />
         <meta property="og:url" content={`${SITE_URL}/blog/${article.slug}`} />
+        <meta property="og:image" content={article.image.startsWith('http') ? article.image : `${SITE_URL}${article.image}`} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta property="og:site_name" content="Filali Design Co." />
         <meta property="article:published_time" content={article.date} />
         <meta property="article:section" content={categoryLabels[article.category]} />
@@ -104,6 +124,7 @@ const BlogPost: React.FC = () => {
         <meta name="twitter:title" content={article.metaTitle} />
         <meta name="twitter:description" content={article.metaDescription} />
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
       <CustomCursor />

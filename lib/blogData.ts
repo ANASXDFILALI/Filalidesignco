@@ -28,7 +28,7 @@ export const blogArticles: BlogArticle[] = [
     date: '2026-03-10',
     readTime: 3,
     excerpt: 'Un salon marocain sur mesure à Casablanca, c\'est bien plus qu\'un meuble : c\'est le cœur d\'un foyer. Découvrez comment nos artisans tapissiers créent des pièces uniques, du velours au bois de cèdre sculpté.',
-    image: '/fd.png',
+    image: '/og-image.jpg',
     content: [
       {
         paragraphs: [
@@ -64,7 +64,7 @@ export const blogArticles: BlogArticle[] = [
     date: '2026-03-08',
     readTime: 3,
     excerpt: 'Des rideaux sur mesure à Casablanca qui transforment la lumière et subliment chaque pièce. Voilages légers, doubles rideaux velours, stores enrouleurs — notre atelier confectionne selon vos dimensions exactes.',
-    image: '/fd.png',
+    image: '/og-image.jpg',
     content: [
       {
         paragraphs: [
@@ -100,7 +100,7 @@ export const blogArticles: BlogArticle[] = [
     date: '2026-03-06',
     readTime: 2,
     excerpt: 'Une table basse artisanale façonne le salon autant qu\'elle le meuble. Nos artisans à Casablanca sculptent, peignent et finissent chaque table basse à la main — du zouaq traditionnel au bois naturel contemporain.',
-    image: '/fd.png',
+    image: '/og-image.jpg',
     content: [
       {
         paragraphs: [
@@ -134,7 +134,7 @@ export const blogArticles: BlogArticle[] = [
     date: '2026-03-04',
     readTime: 3,
     excerpt: 'Notre atelier de tapisserie à Casablanca rénove canapés, fauteuils et banquettes avec un savoir-faire transmis depuis 1985. Nouveau tissu, garnissage mousse haute densité, structure renforcée — votre meuble comme neuf.',
-    image: '/fd.png',
+    image: '/og-image.jpg',
     content: [
       {
         paragraphs: [
@@ -169,7 +169,7 @@ export const blogArticles: BlogArticle[] = [
     date: '2026-03-01',
     readTime: 3,
     excerpt: 'Le salon capitonné est le symbole du luxe résidentiel. À Casablanca, nos artisans fabriquent des salons capitonnés sur mesure — du classique Louis XVI au Chesterfield en cuir — selon vos envies et vos dimensions.',
-    image: '/fd.png',
+    image: '/og-image.jpg',
     content: [
       {
         paragraphs: [
@@ -204,7 +204,7 @@ export const blogArticles: BlogArticle[] = [
     date: '2026-02-28',
     readTime: 2,
     excerpt: 'Nos chaises et fauteuils sur mesure à Casablanca allient confort et esthétique. Tapissés de velours ou de cuir, sculptés dans le bois, ils s\'intègrent parfaitement dans un salon marocain comme dans un intérieur contemporain.',
-    image: '/fd.png',
+    image: '/og-image.jpg',
     content: [
       {
         paragraphs: [
@@ -232,7 +232,7 @@ export const blogArticles: BlogArticle[] = [
     date: '2026-02-25',
     readTime: 3,
     excerpt: 'La décoration intérieure de luxe à Casablanca, c\'est l\'harmonie entre un salon marocain sur mesure, des rideaux en velours, des tables basses en bois sculpté et une ambiance pensée dans ses moindres détails.',
-    image: '/fd.png',
+    image: '/og-image.jpg',
     content: [
       {
         paragraphs: [
@@ -268,7 +268,7 @@ export const blogArticles: BlogArticle[] = [
     date: '2026-02-22',
     readTime: 3,
     excerpt: 'Marrakech, la ville ocre, inspire une décoration intérieure riche en couleurs et en motifs. Nos artisans créent des salons marocains sur mesure à Marrakech qui capturent l\'essence de la tradition marrakchie.',
-    image: '/fd.png',
+    image: '/og-image.jpg',
     content: [
       {
         paragraphs: [
@@ -303,7 +303,7 @@ export const blogArticles: BlogArticle[] = [
     date: '2026-02-20',
     readTime: 2,
     excerpt: 'Les rideaux sur mesure à Marrakech doivent dompter une lumière intense tout en sublimant les intérieurs. Soieries, voilages berbères, doubles rideaux brodés — notre atelier crée des textiles qui racontent l\'histoire de Marrakech.',
-    image: '/fd.png',
+    image: '/og-image.jpg',
     content: [
       {
         paragraphs: [
@@ -332,7 +332,7 @@ export const blogArticles: BlogArticle[] = [
     date: '2026-02-18',
     readTime: 3,
     excerpt: 'Notre tapissier à Marrakech spécialisé dans la rénovation de riads apporte une expertise unique pour restaurer salons marocains, banquettes de patio et fauteuils anciens dans le respect de la tradition.',
-    image: '/fd.png',
+    image: '/og-image.jpg',
     content: [
       {
         paragraphs: [
@@ -366,7 +366,7 @@ export const blogArticles: BlogArticle[] = [
     date: '2026-02-15',
     readTime: 2,
     excerpt: 'Tables et chaises artisanales en bois de cèdre sculpté à Marrakech. Nos menuisiers créent des pièces uniques ornées de zouaq, de marqueterie et de sculptures géométriques inspirées de l\'architecture de la médina.',
-    image: '/fd.png',
+    image: '/og-image.jpg',
     content: [
       {
         paragraphs: [
@@ -394,7 +394,7 @@ export const blogArticles: BlogArticle[] = [
     date: '2026-02-12',
     readTime: 3,
     excerpt: 'Décorer un riad à Marrakech est un acte artistique qui demande expertise et sensibilité culturelle. Nos artisans créent des intérieurs de riad complets — du salon marocain aux rideaux de soie, en passant par les tables basses en cèdre sculpté.',
-    image: '/fd.png',
+    image: '/og-image.jpg',
     content: [
       {
         paragraphs: [
@@ -430,7 +430,7 @@ export const blogArticles: BlogArticle[] = [
     date: '2026-02-10',
     readTime: 3,
     excerpt: 'Capitale administrative du Maroc, Rabat abrite une clientèle exigeante qui recherche des salons marocains alliant prestige, fonctionnalité et raffinement. Notre atelier livre à Rabat et dans toute la région.',
-    image: '/fd.png',
+    image: '/og-image.jpg',
     content: [
       {
         paragraphs: [
@@ -464,7 +464,7 @@ export const blogArticles: BlogArticle[] = [
     date: '2026-02-08',
     readTime: 2,
     excerpt: 'Nos rideaux sur mesure à Rabat transforment chaque fenêtre en une composition textile élégante. Voilages en lin naturel, doubles rideaux en velours, stores motorisés — tout est confectionné selon vos mesures à Rabat.',
-    image: '/fd.png',
+    image: '/og-image.jpg',
     content: [
       {
         paragraphs: [
@@ -492,7 +492,7 @@ export const blogArticles: BlogArticle[] = [
     date: '2026-02-05',
     readTime: 2,
     excerpt: 'Notre tapissier à Rabat rénove canapés, fauteuils et salons marocains avec un savoir-faire reconnu. Visite à domicile, choix du tissu sur échantillons, rénovation clé en main — votre mobilier retrouve sa splendeur.',
-    image: '/fd.png',
+    image: '/og-image.jpg',
     content: [
       {
         paragraphs: [
@@ -520,7 +520,7 @@ export const blogArticles: BlogArticle[] = [
     date: '2026-02-02',
     readTime: 2,
     excerpt: 'Tables basses artisanales sur mesure à Rabat. Bois de cèdre sculpté, fer forgé teinté, plateaux en mosaïque de zellige ou en verre trempé — nos artisans créent des pièces qui habillent votre salon marocain à Rabat.',
-    image: '/fd.png',
+    image: '/og-image.jpg',
     content: [
       {
         paragraphs: [
@@ -550,7 +550,7 @@ export const blogArticles: BlogArticle[] = [
     date: '2026-01-30',
     readTime: 3,
     excerpt: 'Fès, capitale spirituelle et artisanale du Maroc, a une tradition de salon marocain inégalée. Nos artisans perpétuent l\'héritage fassi avec des salons marocains ornés de broderies de Fès, de velours de soie et de bois de cèdre sculpté.',
-    image: '/fd.png',
+    image: '/og-image.jpg',
     content: [
       {
         paragraphs: [
@@ -579,7 +579,7 @@ export const blogArticles: BlogArticle[] = [
     date: '2026-01-28',
     readTime: 2,
     excerpt: 'Notre artisan tapissier à Fès combine le savoir-faire fassi traditionnel avec les techniques modernes pour rénover et créer des salons marocains, canapés et fauteuils d\'exception.',
-    image: '/fd.png',
+    image: '/og-image.jpg',
     content: [
       {
         paragraphs: [
@@ -601,7 +601,7 @@ export const blogArticles: BlogArticle[] = [
     date: '2026-01-25',
     readTime: 2,
     excerpt: 'Les rideaux artisanaux de Fès sont une synthèse unique de l\'art textile marocain. Soieries de la médina, broderies fassis au fil d\'or, voilages en coton naturel — des créations qui honorent l\'héritage de la capitale artisanale du Maroc.',
-    image: '/fd.png',
+    image: '/og-image.jpg',
     content: [
       {
         paragraphs: [
@@ -625,7 +625,7 @@ export const blogArticles: BlogArticle[] = [
     date: '2026-01-22',
     readTime: 3,
     excerpt: 'Tanger, porte de l\'Afrique ouverte sur la Méditerranée, a une identité décorative unique mêlant influences andalouses, marocaines et européennes. Nos salons marocains à Tanger reflètent cette richesse culturelle.',
-    image: '/fd.png',
+    image: '/og-image.jpg',
     content: [
       {
         paragraphs: [
@@ -653,7 +653,7 @@ export const blogArticles: BlogArticle[] = [
     date: '2026-01-20',
     readTime: 2,
     excerpt: 'La lumière du Détroit de Gibraltar est unique — intense et changeante. Nos rideaux sur mesure à Tanger sont conçus pour dompter et sublimer cette lumière méditerranéenne exceptionnelle.',
-    image: '/fd.png',
+    image: '/og-image.jpg',
     content: [
       {
         paragraphs: [
@@ -675,7 +675,7 @@ export const blogArticles: BlogArticle[] = [
     date: '2026-01-18',
     readTime: 2,
     excerpt: 'Nos tapissiers à Tanger créent et rénovent votre ameublement sur mesure : salon marocain, canapés, fauteuils, rideaux. Un service complet pour sublimer votre intérieur tangérois.',
-    image: '/fd.png',
+    image: '/og-image.jpg',
     content: [
       {
         paragraphs: [
@@ -699,7 +699,7 @@ export const blogArticles: BlogArticle[] = [
     date: '2026-01-15',
     readTime: 2,
     excerpt: 'Agadir, station balnéaire et capitale du Souss, a une décoration intérieure qui reflète son ouverture sur l\'Atlantique et son art de vivre détendu. Nos salons marocains à Agadir marient tradition soussienne et modernité.',
-    image: '/fd.png',
+    image: '/og-image.jpg',
     content: [
       {
         paragraphs: [
@@ -721,7 +721,7 @@ export const blogArticles: BlogArticle[] = [
     date: '2026-01-12',
     readTime: 2,
     excerpt: 'La lumière atlantique d\'Agadir est généreuse mais intense. Nos rideaux sur mesure à Agadir sont conçus pour en profiter au maximum tout en protégeant de la chaleur : voilages légers, stores occultants, rideaux thermoréfléchissants.',
-    image: '/fd.png',
+    image: '/og-image.jpg',
     content: [
       {
         paragraphs: [
@@ -743,7 +743,7 @@ export const blogArticles: BlogArticle[] = [
     date: '2026-01-10',
     readTime: 2,
     excerpt: 'Tables basses, chaises et mobilier artisanal à Agadir. Bois d\'arganier, fer forgé local, rotin tressé — des pièces uniques qui incarnent le style soussien alliant nature et artisanat.',
-    image: '/fd.png',
+    image: '/og-image.jpg',
     content: [
       {
         paragraphs: [
@@ -767,7 +767,7 @@ export const blogArticles: BlogArticle[] = [
     date: '2026-01-08',
     readTime: 2,
     excerpt: 'Meknès, ville impériale fondée par Moulay Ismaïl, a une tradition artisanale royale incomparable. Nos salons marocains à Meknès s\'inspirent de cette grandeur pour créer des pièces dignes de la cité ismaïlienne.',
-    image: '/fd.png',
+    image: '/og-image.jpg',
     content: [
       {
         paragraphs: [
@@ -789,7 +789,7 @@ export const blogArticles: BlogArticle[] = [
     date: '2026-01-05',
     readTime: 2,
     excerpt: 'Notre tapissier à Meknès est spécialisé dans la rénovation de meubles anciens de valeur. Fauteuils Louis XV, canapés rococo, salons marocains historiques — nous restaurons avec respect du patrimoine artisanal meknassi.',
-    image: '/fd.png',
+    image: '/og-image.jpg',
     content: [
       {
         paragraphs: [
@@ -813,7 +813,7 @@ export const blogArticles: BlogArticle[] = [
     date: '2026-01-03',
     readTime: 2,
     excerpt: 'Oujda, porte de l\'Orient marocain à la frontière algérienne, a un style de décoration intérieure influencé par l\'Afrique du Nord et le Moyen-Orient. Nos salons marocains à Oujda incorporent cette richesse orientale.',
-    image: '/fd.png',
+    image: '/og-image.jpg',
     content: [
       {
         paragraphs: [
@@ -837,7 +837,7 @@ export const blogArticles: BlogArticle[] = [
     date: '2025-12-28',
     readTime: 2,
     excerpt: 'Notre tapissier à Kénitra offre un service complet : création de salons marocains sur mesure, confection de rideaux, rénovation de canapés et fauteuils. Une expertise artisanale au service des résidents de Kénitra.',
-    image: '/fd.png',
+    image: '/og-image.jpg',
     content: [
       {
         paragraphs: [
@@ -861,7 +861,7 @@ export const blogArticles: BlogArticle[] = [
     date: '2025-12-25',
     readTime: 2,
     excerpt: 'Tétouan, "petite Andalousie du Nord", a préservé un art de vivre unique mêlant héritage marocain et andalou. Nos salons marocains à Tétouan honorent cette richesse culturelle exceptionnelle.',
-    image: '/fd.png',
+    image: '/og-image.jpg',
     content: [
       {
         paragraphs: [
