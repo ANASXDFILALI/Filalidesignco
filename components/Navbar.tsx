@@ -82,7 +82,7 @@ const Navbar: React.FC = () => {
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden lg:flex items-center gap-10">
+        <div className="hidden xl:flex items-center gap-6 2xl:gap-10">
           {navLinks.map((link) =>
             link.isHash ? (
               <a
@@ -119,7 +119,7 @@ const Navbar: React.FC = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden text-riad-gold-light hover:text-white transition-colors p-2"
+          className="xl:hidden text-riad-gold-light hover:text-white transition-colors p-2"
           onClick={() => setIsMobileMenuOpen(true)}
           aria-label="Open menu"
         >
