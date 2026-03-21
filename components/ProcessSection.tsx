@@ -13,7 +13,7 @@ const ProcessSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 px-6 bg-riad-blue text-riad-white border-t border-riad-gold/20">
+    <section className="py-12 md:py-20 px-4 sm:px-6 bg-riad-blue text-riad-white border-t border-riad-gold/20">
       <div className="container mx-auto max-w-7xl">
         <div className="flex flex-col md:flex-row justify-between items-center gap-12">
 

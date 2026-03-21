@@ -3,7 +3,7 @@ import { SOCIAL_LINKS, CONTACT_PHONE, CONTACT_EMAIL } from '../lib/constants';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-riad-red text-riad-sand pt-24 pb-12 px-6 relative overflow-hidden">
+    <footer className="bg-riad-red text-riad-sand pt-16 md:pt-24 pb-10 md:pb-12 px-4 sm:px-6 relative overflow-hidden">
       {/* Texture Overlay */}
       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/black-scales.png')] opacity-10 pointer-events-none mix-blend-overlay"></div>
       <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
           />
         </div>
 
-        <div className="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto mb-20 text-left md:text-center border-t border-riad-gold/20 pt-16">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-12 max-w-5xl mx-auto mb-12 md:mb-20 text-left sm:text-center border-t border-riad-gold/20 pt-10 md:pt-16">
           <div>
             <h4 className="font-royal text-sm text-riad-gold mb-6 uppercase tracking-[0.25em]">Contact</h4>
             <p className="font-elegant text-xl opacity-80 leading-loose">

@@ -31,7 +31,7 @@ const Hero: React.FC = () => {
       </div>
 
       {/* HERO CONTENT */}
-      <div className="relative z-20 text-center px-6 max-w-7xl mx-auto mt-20">
+      <div className="relative z-20 text-center px-4 sm:px-6 max-w-7xl mx-auto mt-16 md:mt-20">
 
         <motion.div
           initial={{ opacity: 0 }}
@@ -42,9 +42,9 @@ const Hero: React.FC = () => {
           {/* Eyebrow */}
           <motion.span
             initial={{ opacity: 0, letterSpacing: '0.1em' }}
-            animate={{ opacity: 1, letterSpacing: '0.35em' }}
+            animate={{ opacity: 1, letterSpacing: '0.2em' }}
             transition={{ duration: 1.2, delay: 0.2 }}
-            className="block font-royal text-xs md:text-sm text-riad-gold uppercase tracking-[0.35em] mb-6"
+            className="block font-royal text-xs md:text-sm text-riad-gold uppercase tracking-[0.2em] md:tracking-[0.35em] mb-4 md:mb-6"
           >
             Casablanca · Est. 1985
           </motion.span>
@@ -54,7 +54,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="font-royal text-5xl md:text-7xl lg:text-8xl text-riad-white uppercase tracking-[0.12em] mb-4 drop-shadow-2xl font-light leading-tight"
+            className="font-royal text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-riad-white uppercase tracking-[0.08em] md:tracking-[0.12em] mb-4 drop-shadow-2xl font-light leading-tight"
           >
             Filali <span className="text-riad-gold-light font-medium">Design</span>
           </motion.h1>
@@ -62,9 +62,9 @@ const Hero: React.FC = () => {
           {/* Divider */}
           <motion.div
             initial={{ width: 0 }}
-            animate={{ width: "8rem" }}
+            animate={{ width: "6rem" }}
             transition={{ duration: 1.5, delay: 0.9, ease: "easeInOut" }}
-            className="h-[1px] bg-gradient-to-r from-transparent via-riad-gold-light to-transparent my-8 mx-auto"
+            className="h-[1px] bg-gradient-to-r from-transparent via-riad-gold-light to-transparent my-6 md:my-8 mx-auto"
           />
 
           {/* Tagline */}
@@ -72,7 +72,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1.2 }}
-            className="font-elegant text-xl md:text-2xl text-riad-white/75 italic tracking-wide max-w-xl leading-relaxed mb-12"
+            className="font-elegant text-base sm:text-lg md:text-2xl text-riad-white/75 italic tracking-wide max-w-xs sm:max-w-sm md:max-w-xl leading-relaxed mb-8 md:mb-12 px-2"
           >
             Salons sur mesure, mobilier bespoke & intérieurs d'exception —<br className="hidden md:block" /> créés par une famille, pour la vôtre.
           </motion.p>
@@ -81,7 +81,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1.8 }}
-            className="flex flex-col sm:flex-row gap-8"
+            className="flex flex-col sm:flex-row gap-4 sm:gap-8"
           >
             <LuxuryButton
               onClick={() => document.getElementById('collections')?.scrollIntoView({ behavior: 'smooth' })}

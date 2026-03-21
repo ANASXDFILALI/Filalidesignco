@@ -49,18 +49,18 @@ const ServicesSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 px-6 bg-riad-white text-riad-brown relative">
+    <section className="py-14 md:py-24 px-4 sm:px-6 bg-riad-white text-riad-brown relative">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="font-arabic text-5xl text-riad-gold mb-2"
+            className="font-arabic text-4xl sm:text-5xl text-riad-gold mb-2"
           >
             {t('services.arabic_title')}
           </motion.div>
-          <h2 className={`font-royal text-4xl uppercase tracking-[0.2em] text-riad-red font-light`}>
+          <h2 className="font-royal text-2xl sm:text-3xl md:text-4xl uppercase tracking-[0.12em] md:tracking-[0.2em] text-riad-red font-light">
             {t('services.title')}
           </h2>
           <div className="w-24 h-[1px] bg-riad-gold mx-auto mt-6"></div>

@@ -131,7 +131,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-32 px-6 bg-riad-blue text-riad-white relative overflow-hidden">
+    <section id="contact" className="py-16 md:py-32 px-4 sm:px-6 bg-riad-blue text-riad-white relative overflow-hidden">
       {/* Decorative Water Effect at bottom */}
       <div className="absolute bottom-0 left-0 w-full h-64 bg-patio-fade z-10 pointer-events-none"></div>
 
@@ -140,16 +140,16 @@ const Contact: React.FC = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="font-arabic text-7xl md:text-9xl text-riad-gold-light mb-8 drop-shadow-lg leading-tight"
+          className="font-arabic text-5xl sm:text-7xl md:text-9xl text-riad-gold-light mb-6 md:mb-8 drop-shadow-lg leading-tight"
         >
           {t('contact.title')}
         </motion.div>
 
-        <p className="font-elegant text-2xl md:text-4xl italic opacity-90 mb-20 leading-loose font-light max-w-4xl mx-auto">
+        <p className="font-elegant text-lg sm:text-xl md:text-4xl italic opacity-90 mb-12 md:mb-20 leading-loose font-light max-w-4xl mx-auto px-2">
           {t('contact.text')}
         </p>
 
-        <form onSubmit={handleSubmit} className="max-w-2xl mx-auto space-y-16 text-left">
+        <form onSubmit={handleSubmit} className="max-w-2xl mx-auto space-y-10 md:space-y-16 text-left">
           <AnimatedInput
             id="name"
             label={t('contact.name')}

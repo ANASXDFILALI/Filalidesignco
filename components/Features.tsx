@@ -50,7 +50,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ number, icon, title, descript
       whileInView="visible"
       viewport={{ once: true, margin: "-50px" }}
       variants={cardVariants}
-      className={`relative p-10 border border-riad-gold/10 hover:border-riad-gold/40 transition-colors duration-500 group overflow-hidden ${bgClass} hover:shadow-gold rounded-sm`}
+      className={`relative p-6 sm:p-8 md:p-10 border border-riad-gold/10 hover:border-riad-gold/40 transition-colors duration-500 group overflow-hidden ${bgClass} hover:shadow-gold rounded-sm`}
     >
       <div className={`absolute top-4 right-6 font-royal text-8xl opacity-[0.03] leading-none select-none group-hover:scale-110 group-hover:opacity-[0.07] transition-all duration-700 ${numberColor}`}>
         {number}
@@ -86,19 +86,19 @@ export const HeritageSection: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="heritage" className="py-32 px-6 bg-riad-blue text-riad-white relative overflow-hidden">
+    <section id="heritage" className="py-16 md:py-32 px-4 sm:px-6 bg-riad-blue text-riad-white relative overflow-hidden">
       {/* Background Decoration */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-[url('https://www.transparenttextures.com/patterns/arabesque.png')] opacity-[0.03] pointer-events-none mix-blend-overlay"></div>
       <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-riad-blue to-transparent pointer-events-none"></div>
 
       <div className="container mx-auto relative z-10">
-        <div className="text-center mb-24 relative">
+        <div className="text-center mb-12 md:mb-24 relative">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1 }}
-            className="font-arabic text-7xl md:text-9xl text-transparent bg-clip-text bg-gold-gradient mb-6 leading-normal drop-shadow-lg"
+            className="font-arabic text-5xl sm:text-7xl md:text-9xl text-transparent bg-clip-text bg-gold-gradient mb-4 md:mb-6 leading-normal drop-shadow-lg"
           >
             الأصالة
           </motion.div>
@@ -107,12 +107,12 @@ export const HeritageSection: React.FC = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.2 }}
-            className="font-royal text-4xl md:text-6xl uppercase tracking-[0.25em] mb-8 font-light"
+            className="font-royal text-3xl sm:text-4xl md:text-6xl uppercase tracking-[0.12em] md:tracking-[0.25em] mb-6 md:mb-8 font-light"
           >
             {t('features.heritage.title_prefix')} <span className="text-riad-gold-light">{t('features.heritage.title_suffix')}</span>
           </motion.h2>
-          <div className="w-24 h-[1px] bg-gradient-to-r from-transparent via-riad-gold to-transparent mx-auto mb-10"></div>
-          <p className="font-elegant text-2xl md:text-3xl italic opacity-85 max-w-4xl mx-auto leading-relaxed font-light text-riad-white/90">
+          <div className="w-16 md:w-24 h-[1px] bg-gradient-to-r from-transparent via-riad-gold to-transparent mx-auto mb-6 md:mb-10"></div>
+          <p className="font-elegant text-lg sm:text-xl md:text-3xl italic opacity-85 max-w-4xl mx-auto leading-relaxed font-light text-riad-white/90 px-2">
             {t('features.heritage.desc')}
           </p>
         </div>
@@ -152,19 +152,19 @@ export const ModernitySection: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="modernity" className="py-32 px-6 bg-riad-red text-riad-white relative overflow-hidden">
+    <section id="modernity" className="py-16 md:py-32 px-4 sm:px-6 bg-riad-red text-riad-white relative overflow-hidden">
       {/* Texture Overlay */}
       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/black-scales.png')] opacity-10 pointer-events-none mix-blend-overlay"></div>
       <div className="absolute inset-0 bg-gradient-to-b from-riad-red via-riad-red/90 to-riad-red/80 pointer-events-none"></div>
 
       <div className="container mx-auto relative z-10">
-        <div className="text-center mb-24 relative">
+        <div className="text-center mb-12 md:mb-24 relative">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1 }}
-            className="font-arabic text-7xl md:text-9xl text-riad-gold-light mb-6 leading-normal drop-shadow-md"
+            className="font-arabic text-5xl sm:text-7xl md:text-9xl text-riad-gold-light mb-4 md:mb-6 leading-normal drop-shadow-md"
           >
             المعاصرة
           </motion.div>
@@ -173,12 +173,12 @@ export const ModernitySection: React.FC = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.2 }}
-            className="font-royal text-4xl md:text-6xl uppercase tracking-[0.25em] text-riad-white mb-8 font-light"
+            className="font-royal text-3xl sm:text-4xl md:text-6xl uppercase tracking-[0.12em] md:tracking-[0.25em] text-riad-white mb-6 md:mb-8 font-light"
           >
             {t('features.modernity.title_prefix')} <span className="text-riad-gold-leaf">{t('features.modernity.title_suffix')}</span>
           </motion.h2>
-          <div className="w-24 h-[1px] bg-gradient-to-r from-transparent via-riad-gold-leaf to-transparent mx-auto mb-10"></div>
-          <p className="font-elegant text-2xl md:text-3xl italic text-riad-white/90 max-w-4xl mx-auto leading-relaxed font-light">
+          <div className="w-16 md:w-24 h-[1px] bg-gradient-to-r from-transparent via-riad-gold-leaf to-transparent mx-auto mb-6 md:mb-10"></div>
+          <p className="font-elegant text-lg sm:text-xl md:text-3xl italic text-riad-white/90 max-w-4xl mx-auto leading-relaxed font-light px-2">
             {t('features.modernity.desc')}
           </p>
         </div>

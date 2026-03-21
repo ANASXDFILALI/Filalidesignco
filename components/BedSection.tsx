@@ -24,7 +24,7 @@ const BedSection: React.FC = () => {
     const y2 = useTransform(scrollYProgress, [0, 1], [0, -80]);
 
     return (
-        <section ref={containerRef} id="beds" className="py-32 px-6 bg-[#F5F2EB] text-riad-brown relative overflow-hidden">
+        <section ref={containerRef} id="beds" className="py-16 md:py-32 px-4 sm:px-6 bg-[#F5F2EB] text-riad-brown relative overflow-hidden">
 
             {/* Soft Texture Background */}
             <div className="absolute inset-0 opacity-20 pointer-events-none" style={{
@@ -34,10 +34,10 @@ const BedSection: React.FC = () => {
             <div className="container mx-auto max-w-7xl relative z-10">
 
                 {/* UPPER SPLIT SECTION */}
-                <div className="flex flex-col-reverse lg:flex-row gap-20 items-center mb-32">
+                <div className="flex flex-col-reverse lg:flex-row gap-10 md:gap-20 items-center mb-16 md:mb-32">
 
                     {/* Image Side */}
-                    <div className="w-full lg:w-1/2 relative h-[700px]">
+                    <div className="w-full lg:w-1/2 relative h-[320px] sm:h-[480px] md:h-[600px] lg:h-[700px]">
                         <motion.div
                             style={{ y: y1 }}
                             className="absolute top-0 left-0 w-3/4 h-3/4 z-10 overflow-hidden shadow-2xl border-4 border-white"
@@ -70,21 +70,21 @@ const BedSection: React.FC = () => {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="w-full lg:w-1/2 lg:pl-16"
                     >
-                        <div className="font-arabic text-7xl md:text-8xl text-riad-gold mb-4">
+                        <div className="font-arabic text-5xl sm:text-6xl md:text-8xl text-riad-gold mb-3 md:mb-4">
                             غرف النوم
-                        </div >
-                        <h2 className="font-royal text-5xl md:text-7xl uppercase tracking-[0.25em] text-riad-brown mb-8 font-light">
+                        </div>
+                        <h2 className="font-royal text-3xl sm:text-4xl md:text-6xl lg:text-7xl uppercase tracking-[0.12em] md:tracking-[0.25em] text-riad-brown mb-6 md:mb-8 font-light">
                             L'Art du Repos
                         </h2>
-                        <div className="w-24 h-[2px] bg-riad-brown mb-10"></div>
+                        <div className="w-16 md:w-24 h-[2px] bg-riad-brown mb-8 md:mb-10"></div>
 
-                        <h3 className="font-elegant text-3xl md:text-4xl text-riad-red italic mb-8 font-light">Têtes de Lit Sur Mesure & Literie Haute Couture</h3>
+                        <h3 className="font-elegant text-xl sm:text-2xl md:text-4xl text-riad-red italic mb-6 md:mb-8 font-light">Têtes de Lit Sur Mesure & Literie Haute Couture</h3>
 
-                        <p className="font-elegant text-2xl text-riad-brown/85 leading-loose mb-8 font-light">
+                        <p className="font-elegant text-base sm:text-lg md:text-2xl text-riad-brown/85 leading-loose mb-6 md:mb-8 font-light">
                             Transformez votre chambre en une suite de palace. Nous concevons des lits majestueux, avec des têtes de lit monumentales qui structurent l'espace.
                         </p>
 
-                        <ul className="space-y-6 mb-12 font-elegant text-xl text-riad-brown/75">
+                        <ul className="space-y-4 md:space-y-6 mb-8 md:mb-12 font-elegant text-base sm:text-lg md:text-xl text-riad-brown/75">
                             <li className="flex items-center gap-4">
                                 <span className="w-2 h-2 bg-riad-gold rounded-full"></span>
                                 Capitonnage fait main (tissus, cuir, daim)
