@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { WHATSAPP_URL } from '../../lib/constants';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../../components/Navbar';
 import Hero from '../../components/Hero';
@@ -124,7 +125,7 @@ const Home: React.FC = () => {
 
                 {/* Floating Action Button - WhatsApp */}
                 <a
-                    href="https://wa.me/212600000000"
+                    href={WHATSAPP_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="fixed bottom-8 right-8 w-16 h-16 bg-[#25D366] rounded-full flex items-center justify-center text-white shadow-xl hover:scale-110 transition-transform duration-300 z-50 border-2 border-riad-white cursor-pointer"

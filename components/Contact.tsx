@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import LuxuryButton from './LuxuryButton';
 import emailjs from '@emailjs/browser';
 import { useTranslation } from 'react-i18next';
+import { WHATSAPP_NUMBER } from '../lib/constants';
 
 const AnimatedInput = ({ label, type = "text", required = false, id, value, onChange }: { label: string, type?: string, required?: boolean, id: string, value?: string, onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void }) => {
   const [isFocused, setIsFocused] = useState(false);
@@ -71,18 +72,13 @@ const Contact: React.FC = () => {
 
   const sendEmail = async (data: typeof formData) => {
     try {
-      // REPLACE THESE WITH YOUR ACTUAL EMAILJS KEYS
-      // Service ID: service_xyz
-      // Template ID: template_xyz
-      // Public Key: user_xyz
-      const serviceID = 'default_service';
-      const templateID = 'template_contact';
-      const publicKey = 'YOUR_PUBLIC_KEY';
+      const serviceID  = import.meta.env.VITE_EMAILJS_SERVICE_ID  || '';
+      const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || '';
+      const publicKey  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY  || '';
 
-      if (publicKey === 'YOUR_PUBLIC_KEY') {
-        console.warn('EmailJS keys are missing. Simulating success.');
-        await new Promise(resolve => setTimeout(resolve, 1500)); // Simulate delay
-        return true;
+      if (!serviceID || !templateID || !publicKey) {
+        console.warn('EmailJS keys manquantes dans .env.local — ajoutez VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID, VITE_EMAILJS_PUBLIC_KEY');
+        return false;
       }
 
       await emailjs.send(serviceID, templateID, {
@@ -107,7 +103,7 @@ const Contact: React.FC = () => {
       `Projet: ${data.project || 'Non spécifié'}\n\n` +
       `Merci de prendre contact avec ce client.`
     );
-    window.open(`https://wa.me/2120605268946?text=${message}`, '_blank');
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, '_blank');
   };
 
   const handleSubmit = async (e: React.FormEvent) => {

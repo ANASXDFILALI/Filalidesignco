@@ -1,8 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
+import { CONTACT_PHONE, SOCIAL_LINKS, SITE_URL as CONST_SITE_URL } from '../lib/constants';
 
-const SITE_URL = 'https://filalidesignco.space';
+const SITE_URL = CONST_SITE_URL;
 
 interface SEOProps {
     titleKey?: string;
@@ -19,7 +20,7 @@ const localBusinessSchema = {
     name: 'Filali Design Co.',
     description: 'Artisan tapissier à Casablanca — salons marocains sur mesure, rideaux, cuisines modernes, rénovation d\'intérieur de luxe.',
     url: SITE_URL,
-    telephone: '+212-522-000000',
+    telephone: CONTACT_PHONE,
     priceRange: 'DH DH DH',
     image: `${SITE_URL}/logo.png`,
     logo: `${SITE_URL}/logo.png`,
@@ -39,7 +40,7 @@ const localBusinessSchema = {
     openingHoursSpecification: [
         { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'], opens: '09:00', closes: '18:00' },
     ],
-    sameAs: [],
+    sameAs: [SOCIAL_LINKS.instagram, SOCIAL_LINKS.linkedin, SOCIAL_LINKS.pinterest],
     areaServed: { '@type': 'Country', name: 'Maroc' },
     hasOfferCatalog: {
         '@type': 'OfferCatalog',

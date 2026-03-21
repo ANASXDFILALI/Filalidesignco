@@ -84,7 +84,7 @@ const Hero: React.FC = () => {
             className="flex flex-col sm:flex-row gap-8"
           >
             <LuxuryButton
-              onClick={() => document.getElementById('courtyard')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => document.getElementById('collections')?.scrollIntoView({ behavior: 'smooth' })}
               variant="primary"
               className="!bg-riad-gold-light !text-riad-blue hover:!bg-riad-white transition-all shadow-gold hover:shadow-gold-hover px-10 py-4 text-lg"
             >

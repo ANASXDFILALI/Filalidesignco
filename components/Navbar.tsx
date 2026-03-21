@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import LuxuryButton from './LuxuryButton';
+import LanguageSwitcher from './LanguageSwitcher';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 interface NavLink {
@@ -103,6 +104,8 @@ const Navbar: React.FC = () => {
               </Link>
             )
           )}
+
+          <LanguageSwitcher />
 
           <LuxuryButton
             onClick={handleContact}

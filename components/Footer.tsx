@@ -1,4 +1,5 @@
 import React from 'react';
+import { SOCIAL_LINKS, CONTACT_PHONE, CONTACT_EMAIL } from '../lib/constants';
 
 const Footer: React.FC = () => {
   return (
@@ -21,9 +22,9 @@ const Footer: React.FC = () => {
         <div className="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto mb-20 text-left md:text-center border-t border-riad-gold/20 pt-16">
           <div>
             <h4 className="font-royal text-sm text-riad-gold mb-6 uppercase tracking-[0.25em]">Contact</h4>
-            <p className="font-elegant text-xl opacity-80 leading-loose hover:text-riad-white transition-colors duration-300">
-              +212 5 22 45 67 89<br />
-              famille@filalidesign.co
+            <p className="font-elegant text-xl opacity-80 leading-loose">
+              <a href={`tel:${CONTACT_PHONE.replace(/\s/g, '')}`} className="hover:text-riad-white transition-colors duration-300 block">{CONTACT_PHONE}</a>
+              <a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-riad-white transition-colors duration-300 block">{CONTACT_EMAIL}</a>
             </p>
           </div>
           <div>
@@ -36,8 +37,15 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="font-royal text-sm text-riad-gold mb-6 uppercase tracking-[0.25em]">Réseaux</h4>
             <div className="flex gap-6 justify-start md:justify-center">
-              {['Instagram', 'LinkedIn', 'Pinterest'].map(social => (
-                <a key={social} href="#" className="font-elegant text-xl opacity-80 hover:text-riad-gold-leaf hover:opacity-100 transition-colors duration-300 transform hover:-translate-y-1 inline-block">{social}</a>
+              {([
+                { label: 'Instagram', url: SOCIAL_LINKS.instagram },
+                { label: 'LinkedIn',  url: SOCIAL_LINKS.linkedin  },
+                { label: 'Pinterest', url: SOCIAL_LINKS.pinterest },
+              ] as const).map(({ label, url }) => (
+                <a key={label} href={url} target="_blank" rel="noopener noreferrer"
+                  className="font-elegant text-xl opacity-80 hover:text-riad-gold-leaf hover:opacity-100 transition-colors duration-300 transform hover:-translate-y-1 inline-block">
+                  {label}
+                </a>
               ))}
             </div>
           </div>
