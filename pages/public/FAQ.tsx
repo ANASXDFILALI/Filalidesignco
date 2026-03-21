@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import SEO from '../../components/SEO';
@@ -18,11 +19,24 @@ const FAQ: React.FC = () => {
         { q: t('faq.q5'), a: t('faq.a5') },
     ];
 
+    const faqSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: questions.map(({ q, a }) => ({
+            '@type': 'Question',
+            name: q,
+            acceptedAnswer: { '@type': 'Answer', text: a },
+        })),
+    };
+
     const [activeIndex, setActiveIndex] = useState<number | null>(0);
 
     return (
         <div className="bg-riad-blue min-h-screen cursor-none text-riad-white">
-            <SEO titleRaw="FAQ | Filali Design Co." />
+            <SEO titleKey="seo.faq.title" descriptionKey="seo.faq.description" />
+            <Helmet>
+                <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+            </Helmet>
             <CustomCursor />
             <Navbar />
 

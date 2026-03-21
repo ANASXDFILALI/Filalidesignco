@@ -15,6 +15,7 @@ const navLinks: NavLink[] = [
   { name: 'Accueil', href: '/', isHash: false },
   { name: 'Collections', href: '/#collections', isHash: true },
   { name: 'Portfolio', href: '/portfolio', isHash: false },
+  { name: 'Blog', href: '/blog', isHash: false },
   { name: 'Notre Histoire', href: '/story', isHash: false },
 ];
 

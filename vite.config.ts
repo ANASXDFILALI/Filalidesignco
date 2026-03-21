@@ -24,6 +24,7 @@ export default defineConfig(({ mode }) => {
             '/story',
             '/faq',
             '/contact',
+            '/blog',
           ],
         }),
       ],
@@ -35,6 +36,20 @@ export default defineConfig(({ mode }) => {
         alias: {
           '@': path.resolve(__dirname, '.'),
         }
-      }
+      },
+      build: {
+        rollupOptions: {
+          output: {
+            manualChunks: {
+              // React + Router dans un chunk dédié
+              'vendor-react': ['react', 'react-dom', 'react-router-dom'],
+              // Framer Motion séparé (lourd)
+              'vendor-motion': ['framer-motion'],
+              // i18n séparé
+              'vendor-i18n': ['i18next', 'react-i18next', 'i18next-http-backend'],
+            },
+          },
+        },
+      },
     };
 });

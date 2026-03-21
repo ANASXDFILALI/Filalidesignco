@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
+import { useLocation } from 'react-router-dom';
 import { CONTACT_PHONE, SOCIAL_LINKS, SITE_URL as CONST_SITE_URL } from '../lib/constants';
 
 const SITE_URL = CONST_SITE_URL;
@@ -63,11 +64,12 @@ const SEO: React.FC<SEOProps> = ({
     isHomePage = false,
 }) => {
     const { t, i18n } = useTranslation();
+    const location = useLocation();
 
     const title = titleRaw || (titleKey ? t(titleKey) : 'Filali Design Co.');
     const description = descriptionRaw || (descriptionKey ? t(descriptionKey) : t('seo.home.description'));
     const lang = i18n.language || 'fr';
-    const path = typeof window !== 'undefined' ? window.location.pathname : '/';
+    const path = location.pathname;
     const canonicalUrl = `${SITE_URL}${path}`;
 
     return (

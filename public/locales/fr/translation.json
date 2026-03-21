@@ -237,8 +237,28 @@
     },
     "seo": {
         "home": {
-            "title": "Filali Design Co. | Artisanat Marocain de Luxe & Architecture",
-            "description": "Découvrez Filali Design Co., l'excellence de l'artisanat marocain. Salons sur mesure, cuisines modernes et rénovation d'intérieur haut de gamme."
+            "title": "Filali Design Co. | Artisanat Marocain de Luxe — Casablanca",
+            "description": "Salons marocains sur mesure, cuisines modernes et tapisserie de luxe à Casablanca. Filali Design Co., artisans depuis 1985. Devis gratuit."
+        },
+        "portfolio": {
+            "title": "Portfolio | Filali Design Co. — Réalisations Artisanales",
+            "description": "Explorez nos réalisations : salons marocains capitonnés, cuisines sur mesure, rideaux luxueux. 40 ans de savoir-faire au service de votre intérieur."
+        },
+        "collections": {
+            "title": "Collections | Salons Marocains, Rideaux & Cuisines Sur Mesure",
+            "description": "Nos collections exclusives de salons marocains, cuisines modernes et rideaux sur mesure. Inspirations luxe pour votre intérieur à Casablanca, Maroc."
+        },
+        "story": {
+            "title": "Notre Histoire | Filali Design Co. — Artisanat Familial depuis 1985",
+            "description": "L'histoire de Filali Design Co., fondé en 1985 par Hamid Filali. 40 ans de savoir-faire transmis de père en fils, au service de l'intérieur marocain de luxe."
+        },
+        "faq": {
+            "title": "FAQ | Questions sur nos Services — Filali Design Co.",
+            "description": "Délais, personnalisation, livraison, restauration… Toutes les réponses sur la tapisserie et décoration d'intérieur de Filali Design Co. à Casablanca."
+        },
+        "contact": {
+            "title": "Contact & Devis Gratuit | Filali Design Co. — Casablanca",
+            "description": "Contactez Filali Design Co. pour un devis gratuit. Consultation pour salon sur mesure, cuisine, rideaux et rénovation d'intérieur haut de gamme à Casablanca."
         },
         "admin": {
             "title": "Admin | Filali Design Co."

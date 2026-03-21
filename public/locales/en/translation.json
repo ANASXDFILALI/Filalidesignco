@@ -237,8 +237,28 @@
     },
     "seo": {
         "home": {
-            "title": "Filali Design Co. | Artisanat Marocain de Luxe",
-            "description": "Découvrez Filali Design Co., l'excellence de l'artisanat marocain. Salons sur mesure, cuisines modernes et rénovation d'intérieur haut de gamme."
+            "title": "Filali Design Co. | Luxury Moroccan Craftsmanship — Casablanca",
+            "description": "Custom Moroccan salons, bespoke kitchens & luxury upholstery in Casablanca. Filali Design Co., master craftsmen since 1985. Free quote."
+        },
+        "portfolio": {
+            "title": "Portfolio | Filali Design Co. — Artisan Creations",
+            "description": "Browse our portfolio: Moroccan salons, bespoke kitchens, luxury curtains and upholstery. 40 years of craftsmanship for exceptional interiors."
+        },
+        "collections": {
+            "title": "Collections | Moroccan Salons, Curtains & Bespoke Kitchens",
+            "description": "Our exclusive collections of Moroccan salons, modern kitchens and bespoke curtains. Luxury inspiration for your Casablanca interior."
+        },
+        "story": {
+            "title": "Our Story | Filali Design Co. — Family Craftsmanship since 1985",
+            "description": "The story of Filali Design Co., founded in 1985 by Hamid Filali. 40 years of artisanal expertise passed from father to son, serving Moroccan luxury interiors."
+        },
+        "faq": {
+            "title": "FAQ | Filali Design Co. — Your Questions Answered",
+            "description": "Timelines, customisation, delivery, restoration… All your questions about Filali Design Co.'s upholstery and interior decoration services in Casablanca."
+        },
+        "contact": {
+            "title": "Contact & Free Quote | Filali Design Co. — Casablanca",
+            "description": "Contact Filali Design Co. for a free quote. Consultations for bespoke salons, kitchens, curtains and luxury interior renovation in Casablanca, Morocco."
         },
         "admin": {
             "title": "Admin | Filali Design Co."

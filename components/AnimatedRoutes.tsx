@@ -13,6 +13,8 @@ import Story from '../pages/public/Story';
 import FAQ from '../pages/public/FAQ';
 import ContactPage from '../pages/public/ContactPage';
 import TestimonialsEditor from '../pages/admin/TestimonialsEditor';
+import Blog from '../pages/public/Blog';
+import BlogPost from '../pages/public/BlogPost';
 
 const AnimatedRoutes: React.FC = () => {
     const location = useLocation();
@@ -28,6 +30,8 @@ const AnimatedRoutes: React.FC = () => {
                 <Route path="/story" element={<Story />} />
                 <Route path="/faq" element={<FAQ />} />
                 <Route path="/contact" element={<ContactPage />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/blog/:slug" element={<BlogPost />} />
 
                 {/* Admin Routes */}
                 <Route path="/admin" element={<AdminLayout />}>

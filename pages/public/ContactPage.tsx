@@ -56,7 +56,7 @@ const ContactPage: React.FC = () => {
 
     return (
         <div className="bg-[#1a1a1a] min-h-screen cursor-none text-white">
-            <SEO titleRaw={t('nav.contact')} />
+            <SEO titleKey="seo.contact.title" descriptionKey="seo.contact.description" />
             <CustomCursor />
             <Navbar />
 

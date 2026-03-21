@@ -34,7 +34,7 @@ const Collections: React.FC = () => {
 
     return (
         <div className="bg-riad-blue min-h-screen cursor-none">
-            <SEO titleKey="nav.collections" descriptionKey="seo.home.description" />
+            <SEO titleKey="seo.collections.title" descriptionKey="seo.collections.description" />
             <CustomCursor />
             <Navbar />
 

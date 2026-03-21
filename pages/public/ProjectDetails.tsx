@@ -8,6 +8,7 @@ import { motion } from 'framer-motion';
 import { ArrowLeft } from 'lucide-react';
 import LuxuryButton from '../../components/LuxuryButton';
 import Lightbox from '../../components/Lightbox';
+import SEO from '../../components/SEO';
 
 const ProjectDetails: React.FC = () => {
     const { id } = useParams<{ id: string }>();
@@ -33,6 +34,11 @@ const ProjectDetails: React.FC = () => {
 
     return (
         <div className="bg-riad-blue min-h-screen text-riad-white cursor-none">
+            <SEO
+                titleRaw={`${album.title} | Filali Design Co.`}
+                descriptionRaw={album.description || `Réalisation Filali Design Co. — ${album.title}. Artisanat marocain de luxe à Casablanca.`}
+                image={album.coverImage}
+            />
             <CustomCursor />
             <Navbar />
 

@@ -5,6 +5,7 @@ import { useProject, Category } from '../../context/ProjectContext';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import CustomCursor from '../../components/CustomCursor';
+import SEO from '../../components/SEO';
 
 const Portfolio: React.FC = () => {
     const { albums } = useProject();
@@ -29,6 +30,7 @@ const Portfolio: React.FC = () => {
 
     return (
         <div className="bg-riad-blue min-h-screen text-riad-white cursor-none">
+            <SEO titleKey="seo.portfolio.title" descriptionKey="seo.portfolio.description" />
             <CustomCursor />
             <Navbar />
 

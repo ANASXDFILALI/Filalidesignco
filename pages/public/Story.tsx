@@ -43,7 +43,7 @@ const Story: React.FC = () => {
 
     return (
         <div className="bg-[#FAF9F6] min-h-screen cursor-none text-riad-brown">
-            <SEO titleRaw="Notre Histoire | Filali Design Co." />
+            <SEO titleKey="seo.story.title" descriptionKey="seo.story.description" />
             <CustomCursor />
             <Navbar />
 
