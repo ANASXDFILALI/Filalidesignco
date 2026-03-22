@@ -18,7 +18,7 @@ interface TestimonialContextType {
 }
 
 const defaultTestimonials: Testimonial[] = [
-    { id: uuidv4(), text: "La rénovation de notre lobby a été métamorphosée par l'expertise de Filali. Une fusion parfaite entre l'âme traditionnelle marocaine et une élégance contemporaine absolue.", author: "Directeur, Hôtel Royal Mansour", role: "Hôtellerie de Luxe" },
+    { id: uuidv4(), text: "La rénovation de notre lobby a été métamorphosée par l'expertise de Filali. Une fusion parfaite entre l'âme traditionnelle marocaine et une élégance contemporaine absolue.", author: "Youssef Benali", role: "Client particulier" },
     { id: uuidv4(), text: "Redonner vie à ce Riad historique demandait une sensibilité unique. Le travail du bois de cèdre et des tissus brodés main est tout simplement exceptionnel.", author: "Jean-Pierre L.", role: "Restauration de Riad" },
     { id: uuidv4(), text: "J'ai trouvé chez Filali Design une écoute rare. Mes pièces de collection sont sublimées par leur travail sur mesure. Un véritable partenaire artistique.", author: "Sarah B.", role: "Collectionneuse d'Art" },
 ];

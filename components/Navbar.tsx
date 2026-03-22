@@ -13,7 +13,7 @@ interface NavLink {
 
 const navLinks: NavLink[] = [
   { name: 'Accueil', href: '/', isHash: false },
-  { name: 'Collections', href: '/#collections', isHash: true },
+  { name: 'Collections', href: '/collections', isHash: false },
   { name: 'Portfolio', href: '/portfolio', isHash: false },
   { name: 'Blog', href: '/blog', isHash: false },
   { name: 'Notre Histoire', href: '/story', isHash: false },
@@ -68,17 +68,20 @@ const Navbar: React.FC = () => {
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] border-b border-riad-gold/10
-      ${isScrolled ? 'bg-riad-blue/80 backdrop-blur-md shadow-glass py-2' : 'bg-transparent py-4'}`}
+      ${isScrolled ? 'bg-riad-blue shadow-glass py-2' : 'bg-transparent py-4'}`}
     >
       <div className="container mx-auto h-full px-8 flex items-center justify-between">
 
-        {/* Logo */}
-        <Link to="/" className="block group flex-shrink-0">
+        {/* Logo + Brand name */}
+        <Link to="/" className="flex items-center gap-3 group flex-shrink-0">
           <img
             src="/fd.png"
             alt="Filali Design Co."
             className="h-14 md:h-16 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
           />
+          <span className="font-royal text-sm md:text-base uppercase tracking-[0.18em] text-riad-white/90 group-hover:text-riad-gold transition-colors duration-300 hidden sm:block">
+            Filali Design Co.
+          </span>
         </Link>
 
         {/* Desktop Menu */}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { HammerIcon, SofaIcon, PaletteIcon, CompassIcon } from './Icons';
@@ -88,6 +89,23 @@ const ServicesSection: React.FC = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* CTA tarifs */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3 }}
+          className="mt-16 text-center"
+        >
+          <Link
+            to="/prix-tarifs"
+            className="inline-block px-10 py-4 border border-riad-gold text-riad-brown font-royal text-sm uppercase tracking-[0.2em] hover:bg-riad-gold hover:text-white transition-all duration-500"
+          >
+            Voir nos Prix & Tarifs
+          </Link>
+        </motion.div>
+
       </div>
     </section>
   );

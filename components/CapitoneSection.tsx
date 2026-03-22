@@ -4,11 +4,24 @@ import LuxuryButton from './LuxuryButton';
 import { ChevronRight, ChevronLeft } from 'lucide-react';
 import { useProject } from '../context/ProjectContext';
 import { useTranslation } from 'react-i18next';
+import { v4 as uuidv4 } from 'uuid';
+import imagesData from '../images.json';
+
+const fallbackSalons = (imagesData as any).capitone.salons.map((item: any) => ({
+  id: item.id || uuidv4(),
+  title: item.title,
+  category: 'salons' as const,
+  description: item.description,
+  coverImage: item.image,
+  images: [{ id: uuidv4(), src: item.image, caption: item.subtitle }],
+  createdAt: 0,
+}));
 
 const CapitoneSection: React.FC = () => {
   const { t } = useTranslation();
-  const { albums } = useProject();
-  const salonModels = albums.filter(album => album.category === 'salons');
+  const { albums, loading } = useProject();
+  const supabaseSalons = albums.filter(album => album.category === 'salons');
+  const salonModels = !loading && supabaseSalons.length === 0 ? fallbackSalons : supabaseSalons;
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -24,7 +37,7 @@ const CapitoneSection: React.FC = () => {
   const nextSlide = () => setCurrentIndex((prev) => (prev + 1) % salonModels.length);
   const prevSlide = () => setCurrentIndex((prev) => (prev - 1 + salonModels.length) % salonModels.length);
 
-  if (salonModels.length === 0) return null; // Or some fallback state
+  if (loading || salonModels.length === 0) return null;
 
   const currentModel = salonModels[currentIndex];
 

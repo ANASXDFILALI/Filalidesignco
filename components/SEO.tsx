@@ -44,6 +44,13 @@ const localBusinessSchema = {
     openingHoursSpecification: [
         { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'], opens: '09:00', closes: '18:00' },
     ],
+    contactPoint: {
+        '@type': 'ContactPoint',
+        telephone: CONTACT_PHONE,
+        contactType: 'Customer Service',
+        areaServed: 'MA',
+        availableLanguage: ['fr', 'ar'],
+    },
     sameAs: [SOCIAL_LINKS.instagram, SOCIAL_LINKS.linkedin, SOCIAL_LINKS.pinterest],
     areaServed: { '@type': 'Country', name: 'Maroc' },
     aggregateRating: {
@@ -56,7 +63,7 @@ const localBusinessSchema = {
     review: [
         {
             '@type': 'Review',
-            author: { '@type': 'Person', name: 'Directeur, Hôtel Royal Mansour' },
+            author: { '@type': 'Person', name: 'Youssef Benali' },
             reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
             reviewBody: 'La rénovation de notre lobby a été métamorphosée par l\'expertise de Filali. Une fusion parfaite entre l\'âme traditionnelle marocaine et une élégance contemporaine absolue.',
         },

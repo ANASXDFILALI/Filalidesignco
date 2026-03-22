@@ -52,6 +52,8 @@ const ArticleCard: React.FC<{ article: BlogArticle; idx: number }> = ({ article,
       <img
         src={article.image}
         alt={article.title}
+        width={400}
+        height={240}
         className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700"
         loading="lazy"
       />
@@ -124,7 +126,7 @@ const Blog: React.FC = () => {
   return (
     <div className="bg-riad-blue min-h-screen cursor-none text-riad-white">
       <Helmet>
-        <title>Blog Décoration Maroc | Salons, Rideaux, Tapissier — Filali Design</title>
+        <title>Blog Décoration Maroc | Filali Design Co.</title>
         <meta name="description" content="Conseils décoration intérieure pour toutes les villes du Maroc. Salon marocain sur mesure, rideaux, tables, chaises, tapissier à Casablanca, Marrakech, Rabat, Fès..." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={`${SITE_URL}/blog`} />

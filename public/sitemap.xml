@@ -78,6 +78,109 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Services -->
+  <url>
+    <loc>https://filalidesignco.space/services/salon-marocain</loc>
+    <lastmod>2026-03-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://filalidesignco.space/services/salon-marocain"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://filalidesignco.space/services/salon-marocain"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://filalidesignco.space/services/salon-marocain"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://filalidesignco.space/services/tapisserie</loc>
+    <lastmod>2026-03-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://filalidesignco.space/services/tapisserie"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://filalidesignco.space/services/tapisserie"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://filalidesignco.space/services/tapisserie"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://filalidesignco.space/services/rideaux</loc>
+    <lastmod>2026-03-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://filalidesignco.space/services/rideaux"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://filalidesignco.space/services/rideaux"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://filalidesignco.space/services/rideaux"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://filalidesignco.space/services/cuisine</loc>
+    <lastmod>2026-03-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://filalidesignco.space/services/cuisine"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://filalidesignco.space/services/cuisine"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://filalidesignco.space/services/cuisine"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Pages SEO -->
+  <url>
+    <loc>https://filalidesignco.space/salon-marocain</loc>
+    <lastmod>2026-03-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://filalidesignco.space/salon-marocain"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://filalidesignco.space/salon-marocain"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://filalidesignco.space/salon-marocain"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://filalidesignco.space/prix-tarifs</loc>
+    <lastmod>2026-03-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://filalidesignco.space/prix-tarifs"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://filalidesignco.space/prix-tarifs"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://filalidesignco.space/prix-tarifs"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://filalidesignco.space/avis</loc>
+    <lastmod>2026-03-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://filalidesignco.space/avis"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://filalidesignco.space/avis"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://filalidesignco.space/avis"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Villes -->
+  <url>
+    <loc>https://filalidesignco.space/marrakech</loc>
+    <lastmod>2026-03-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://filalidesignco.space/marrakech"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://filalidesignco.space/marrakech"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://filalidesignco.space/marrakech"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://filalidesignco.space/rabat</loc>
+    <lastmod>2026-03-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://filalidesignco.space/rabat"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://filalidesignco.space/rabat"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://filalidesignco.space/rabat"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://filalidesignco.space/casablanca</loc>
+    <lastmod>2026-03-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://filalidesignco.space/casablanca"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://filalidesignco.space/casablanca"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://filalidesignco.space/casablanca"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
   <!-- Blog Articles -->
   <url><loc>https://filalidesignco.space/blog/salon-marocain-sur-mesure-casablanca</loc><lastmod>2026-03-10</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://filalidesignco.space/blog/rideaux-sur-mesure-casablanca</loc><lastmod>2026-03-08</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>

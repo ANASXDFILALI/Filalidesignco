@@ -78,6 +78,8 @@ const Gallery: React.FC = () => {
               <img
                 src={img.src}
                 alt={img.alt}
+                width={600}
+                height={450}
                 className="w-full h-full object-cover transition-all duration-1200 group-hover:scale-115 sepia-[0.5] group-hover:sepia-0 brightness-95 group-hover:brightness-105"
                 loading="lazy"
               />
@@ -142,6 +144,8 @@ const Gallery: React.FC = () => {
               <img
                 src={selectedImage.src}
                 alt={selectedImage.alt}
+                width={1200}
+                height={900}
                 className="max-h-[80vh] w-auto object-contain border border-riad-gold/20 shadow-2xl"
               />
               <div className="mt-6 text-center">

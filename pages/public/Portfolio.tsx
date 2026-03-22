@@ -80,6 +80,8 @@ const Portfolio: React.FC = () => {
                                     <img
                                         src={album.coverImage}
                                         alt={album.title}
+                                        width={600}
+                                        height={450}
                                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100"
                                     />
                                 </div>

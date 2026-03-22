@@ -1,3 +1,6 @@
+import { casablancaArticles1 } from './casablancaArticles1';
+import { casablancaArticles2 } from './casablancaArticles2';
+
 export interface BlogArticle {
   slug: string;
   title: string;
@@ -872,6 +875,8 @@ export const blogArticles: BlogArticle[] = [
     ],
   },
 
+  ...casablancaArticles1,
+  ...casablancaArticles2,
 ];
 
 export const blogCategories = [

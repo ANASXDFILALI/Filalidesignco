@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { WHATSAPP_URL } from '../../lib/constants';
-import { useNavigate } from 'react-router-dom';
 import Navbar from '../../components/Navbar';
 import Hero from '../../components/Hero';
 import { HeritageSection, ModernitySection } from '../../components/Features';
@@ -8,24 +7,15 @@ import Gallery from '../../components/Gallery';
 import Contact from '../../components/Contact';
 import Footer from '../../components/Footer';
 import Background from '../../components/Background';
-import IntroGate from '../../components/IntroGate';
-import CapitoneSection from '../../components/CapitoneSection';
-import BedSection from '../../components/BedSection';
-import CurtainSection from '../../components/CurtainSection';
 import ServicesSection from '../../components/ServicesSection';
 import ProcessSection from '../../components/ProcessSection';
 import CustomCursor from '../../components/CustomCursor';
-import CuisinesSection from '../../components/CuisinesSection';
-import WoodSection from '../../components/WoodSection';
 import TestimonialsSection from '../../components/TestimonialsSection';
 import MoodboardIndicator from '../../components/MoodboardIndicator';
-import LuxuryButton from '../../components/LuxuryButton';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import SEO from '../../components/SEO';
 
 const Home: React.FC = () => {
-    const [hasEntered, setHasEntered] = useState(false);
-    const navigate = useNavigate();
     const { scrollYProgress } = useScroll();
     const scaleX = useSpring(scrollYProgress, {
         stiffness: 100,
@@ -37,19 +27,9 @@ const Home: React.FC = () => {
         <main className="relative min-h-screen bg-riad-blue overflow-x-hidden cursor-none">
             <SEO titleKey="seo.home.title" descriptionKey="seo.home.description" isHomePage />
 
-            {/* Custom Luxury Cursor */}
             <CustomCursor />
 
-            {/* The 3D Entry Gate */}
-            <IntroGate onEnter={() => setHasEntered(true)} />
-
-            {/* Main Content - Only visible/interactive after entry starts */}
-            <motion.div
-                initial={{ opacity: 0 }}
-                animate={hasEntered ? { opacity: 1 } : { opacity: 0 }}
-                transition={{ duration: 1.5, ease: "easeOut" }}
-                className={`relative w-full ${!hasEntered ? 'h-screen overflow-hidden' : ''}`}
-            >
+            <div className="relative w-full">
                 <Background />
 
                 {/* Scroll Progress Bar */}
@@ -62,68 +42,17 @@ const Home: React.FC = () => {
                 <Hero />
 
                 <ServicesSection />
-
-                {/* Collections — inline on home page */}
-                <div id="collections">
-                    <div id="salons">
-                        <CapitoneSection />
-                        <div className="flex justify-center pb-20 bg-[#261a14] border-b border-riad-gold/10">
-                            <LuxuryButton variant="primary" onClick={() => navigate('/portfolio?filter=salons')}>
-                                View Full Collection
-                            </LuxuryButton>
-                        </div>
-                    </div>
-
-                    <div id="beds">
-                        <BedSection />
-                        <div className="flex justify-center pb-20 bg-[#F5F2EB] border-b border-riad-gold/10">
-                            <LuxuryButton variant="primary" onClick={() => navigate('/portfolio?filter=beds')}>
-                                View Full Collection
-                            </LuxuryButton>
-                        </div>
-                    </div>
-
-                    <div id="curtains">
-                        <CurtainSection />
-                        <div className="flex justify-center pb-20 bg-riad-blue border-b border-riad-gold/10">
-                            <LuxuryButton variant="primary" onClick={() => navigate('/portfolio?filter=curtains')}>
-                                View Full Collection
-                            </LuxuryButton>
-                        </div>
-                    </div>
-
-                    <div id="wood">
-                        <WoodSection />
-                        <div className="flex justify-center pb-20 bg-riad-brown border-b border-riad-gold/10">
-                            <LuxuryButton variant="primary" onClick={() => navigate('/portfolio?filter=wood_meubles')}>
-                                View Full Collection
-                            </LuxuryButton>
-                        </div>
-                    </div>
-
-                    <div id="cuisines">
-                        <CuisinesSection />
-                        <div className="flex justify-center pb-20 bg-gray-900 border-b border-riad-gold/10">
-                            <LuxuryButton variant="primary" onClick={() => navigate('/portfolio?filter=cuisines')}>
-                                View Full Collection
-                            </LuxuryButton>
-                        </div>
-                    </div>
-                </div>
-
                 <HeritageSection />
                 <ModernitySection />
-
                 <ProcessSection />
                 <Gallery />
                 <TestimonialsSection />
                 <Contact />
                 <Footer />
 
-                {/* Moodboard Floating Indicator */}
                 <MoodboardIndicator />
 
-                {/* Floating Action Button - WhatsApp */}
+                {/* WhatsApp */}
                 <a
                     href={WHATSAPP_URL}
                     target="_blank"
@@ -136,7 +65,7 @@ const Home: React.FC = () => {
                         <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.856L0 24l6.335-1.51A11.942 11.942 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 0 1-5.032-1.388l-.36-.214-3.733.89.936-3.618-.235-.373A9.818 9.818 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182c5.43 0 9.818 4.388 9.818 9.818 0 5.43-4.388 9.818-9.818 9.818z"/>
                     </svg>
                 </a>
-            </motion.div>
+            </div>
         </main>
     );
 };

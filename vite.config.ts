@@ -25,6 +25,19 @@ export default defineConfig(({ mode }) => {
             '/faq',
             '/contact',
             '/blog',
+            // Services
+            '/services/salon-marocain',
+            '/services/tapisserie',
+            '/services/rideaux',
+            '/services/cuisine',
+            // Villes
+            '/casablanca',
+            '/marrakech',
+            '/rabat',
+            // Pages SEO
+            '/salon-marocain',
+            '/prix-tarifs',
+            '/avis',
           ],
         }),
       ],
