@@ -5,6 +5,7 @@ import { vitePrerenderPlugin } from 'vite-prerender-plugin';
 
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
+    const isCI = process.env.CI === 'true';
     return {
       server: {
         port: 3000,
@@ -12,12 +13,11 @@ export default defineConfig(({ mode }) => {
       },
       plugins: [
         react(),
-        vitePrerenderPlugin({
-          // Inject prerendered HTML into <div id="root">
+        // Prerender disabled in CI (Netlify) to avoid build timeout.
+        // The SPA fallback in netlify.toml (/* → index.html) handles routing.
+        ...(!isCI ? [vitePrerenderPlugin({
           renderTarget: '#root',
-          // Path to the prerender entry script
           prerenderScript: path.resolve(__dirname, 'prerender.tsx'),
-          // Prerender all public routes (admin excluded)
           additionalPrerenderRoutes: [
             '/portfolio',
             '/collections',
@@ -25,21 +25,18 @@ export default defineConfig(({ mode }) => {
             '/faq',
             '/contact',
             '/blog',
-            // Services
             '/services/salon-marocain',
             '/services/tapisserie',
             '/services/rideaux',
             '/services/cuisine',
-            // Villes
             '/casablanca',
             '/marrakech',
             '/rabat',
-            // Pages SEO
             '/salon-marocain',
             '/prix-tarifs',
             '/avis',
           ],
-        }),
+        })] : []),
       ],
       define: {
         'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
